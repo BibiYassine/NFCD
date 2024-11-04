@@ -28,9 +28,9 @@ controleerAdmin($mysqli);
         <p>Welkom, <?php echo $_SESSION['klantnaam']; ?>!</p>
 
         <div class="lijst">
-            <a href="user.php" class="btn">Beheer Klanten</a>
+            <a href="user" class="btn">Beheer Klanten</a>
             <br>
-            <a href="afspraakAdmin.php" class="btn">Beheer Afspraken</a>
+            <a href="afspraakAdmin" class="btn">Beheer Afspraken</a>
         </div>
     </div>
 

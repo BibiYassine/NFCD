@@ -20,7 +20,7 @@ session_start();
             <input type="text" name="klantnaamofemail" required><br><br>
             <label>Wachtwoord</label>
             <input type="password" name="wachtwoord" required><br>
-            <p>Nog geen account? <a href="register.php">Registreer</a></p>
+            <p>Nog geen account? <a href="register">Registreer</a></p>
             <br>
             <input type="submit" value="Inloggen">
             
