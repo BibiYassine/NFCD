@@ -1,0 +1,185 @@
+/* Algemene opmaak */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigatiebalk */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.3em;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: darkgrey;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 2em;
+}
+
+/* Hamburger menu */
+.menu-toggle {
+    margin-left: 20px;
+    font-size: 45px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: black;
+}
+
+/* Hoofdsectie */
+main {
+    flex: 1;
+}
+
+.gemeentes {
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid #000; /* Kader rond de gemeentes sectie */
+    border-radius: 10px; /* Afgeronde hoeken */
+    background-color: #f9f9f9; /* Achtergrondkleur voor de sectie */
+}
+
+.gemeente-list {
+    list-style-type: none; /* Verwijder standaard opsommingstekens */
+    padding: 0; /* Verwijder standaard padding */
+}
+
+.gemeente-list li {
+    padding: 10px; /* Ruimte rond elke gemeente */
+    border-bottom: 1px solid #ccc; /* Onderscheidende lijn tussen gemeentes */
+}
+
+.gemeente-list li:last-child {
+    border-bottom: none; /* Verwijder de lijn van de laatste gemeente */
+}
+
+.gemeente-list li:hover {
+    background-color: #e0e0e0; /* Hover effect */
+    transition: background-color 0.3s; /* Zachte overgang */
+}
+
+
+footer {
+    background-color: black;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 1.2em;
+    width: 100%;
+    
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    color: #fdf8f8;
+}
+
+/* Contact Sectie */
+.contact-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden; /* Zorgt ervoor dat de hoeken afgerond blijven */
+}
+
+.contact-form {
+    margin-top: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .sidenav {
+        width: 0; /* Begin met een gesloten sidenav */
+    }
+
+    .menu-toggle {
+        display: block;
+        color: black; /* Hamburger kleur */
+        size: 10px;
+    }
+
+    .contact-section {
+        padding: 20px;
+    }
+
+    .contact-info h1,
+    .contact-info h2 {
+        font-size: 1.5em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px auto; /* Grotere koppen op mobiele apparaten */
+    }
+
+    .contact-form button {
+        width: 100%; /* Volledige breedte van de knop */
+    }
+}

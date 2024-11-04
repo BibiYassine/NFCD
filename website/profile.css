@@ -1,0 +1,106 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.success-message {
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Sidenav (zijmenu) */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.3em;
+    color: #f2f2f2;
+    display: block;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover {
+    color: darkgrey;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 2em;
+}
+
+/* Hamburger menu */
+.menu-toggle {
+    margin-left: 20px;
+    font-size: 45px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: black;
+}
+
+/* Footer styling */
+footer {
+    background-color: black;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 1.2em;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    color: #fdf8f8;
+}
+
+/* Responsive aanpassingen */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .sidenav a {
+       
+        
+    }
+}
+
+@media (max-width: 768px) {
+
+    
+}

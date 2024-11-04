@@ -1,0 +1,35 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Lichtgrijze achtergrond */
+    font-family: Arial, sans-serif; /* Mooie lettertype */
+    margin: 0; /* Verwijder standaard marge */
+}
+
+.form {
+    background-color: white; /* Witte achtergrond voor het formulier */
+    border-radius: 8px; /* Afgeronde hoeken */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Schaduw effect */
+    padding: 20px; /* Ruimte rondom de inhoud */
+    text-align: center; /* Centreer de tekst */
+}
+
+p {
+    font-size: 18px; /* Grotere tekst voor de boodschap */
+    color: #333; /* Donkergrijze kleur voor tekst */
+    margin: 0; /* Verwijder marge */
+}
+
+a {
+    text-decoration: none; /* Verwijder de standaard onderstreping */
+    color: black; /* Standaard link kleur */
+    font-weight: bold; /* Maak de link vetgedrukt */
+    transition: color 0.3s; /* Maak de overgang soepel */
+}
+
+a:hover {
+    color: darkgrey; /* Kleur van de link bij hover */
+}
