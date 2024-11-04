@@ -29,7 +29,7 @@
         <section id="home" class="hero">
             <h1>Welkom op de officiële website van NFCD</h1>
             <p>Needforcardetailing, Het detail bedrijf dat uw wagen nodig heeft.</p>
-            <a href="over" class="btn">Lees hier meer</a>
+            <a href="over.php" class="btn">Lees hier meer</a>
         </section>
     
 
@@ -60,7 +60,7 @@
             <h2>Wat bieden we aan?</h2>
             <p>Hieronder vindt u een overzicht van onze diensten:</p>
             <br>
-            <a href="services" class="book-button">Boek nu</a>
+            <a href="services.php" class="book-button">Boek nu</a>
             <div class="services-container" data-aos="fade-up">
             <div class="service-item" data-aos="fade-up">
                     <img src="images/luxere.png" alt="Alcantara Cleaning">

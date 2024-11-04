@@ -38,7 +38,7 @@ if (isset($_POST['klant_id'])) {
 <body>
 
 <!-- Back Button -->
-<h4><a href="admin"><img class="back" src="images/goback.png"></a></h4>
+<h4><a href="admin.php"><img class="back" src="images/goback.png"></a></h4>
 
 <!-- Klanten List -->
 <div class="klanten-lijst">
