@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="libraries/aos.css">
     
 </head>
-<body>
+<body data-aos="fade-up">
 <?php
 
          include 'connect.php';
@@ -33,7 +33,7 @@
         </section>
     
 
-    <div>
+    <div data-aos="fade-up">
         <section id="faq" class="faq" data-aos="fade-up">
             <h2>Veel Gestelde Vragen (FAQ)</h2>
             <p>Dit zijn de meest gestelde vragen die wij krijgen als detailing bedrijf.</p>

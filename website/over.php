@@ -18,7 +18,7 @@
 <main>
     <section class="about-section">
         <div class="about-content">
-            <img src="images/logo.png" alt="NFCD Detail Service" class="about-image">
+            <img src="images/over.png" alt="NFCD Detail Service" class="about-image">
             <div class="text-content" data-aos="fade-up">
                 <h1>NFCD?</h1>
                 <p data-aos="fade-up">Bij NFCD streven we naar de hoogste kwaliteit in dieptereiniging en detailing van uw voertuig. Onze detailers gebruiken geavanceerde technieken en hoogwaardige producten om elk detail grondig te reinigen en uw auto in topconditie te houden. Ons doel is om de perfecte afwerking te leveren, waarbij we elk voertuig met zorg en aandacht behandelen, zodat u de kunst van dieptereiniging en detailing kunt ervaren zoals nooit tevoren.</p>
