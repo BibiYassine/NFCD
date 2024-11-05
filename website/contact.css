@@ -1,7 +1,7 @@
 /* Algemene opmaak */
 html, body {
     height: 100%;
-    width: 100%;
+    width: 100%;    
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: white;
@@ -55,6 +55,7 @@ html, body {
     color: black;
 }
 
+
 /* Hoofdsectie */
 main {
     flex: 1;
@@ -91,11 +92,10 @@ main {
 footer {
     background-color: black;
     text-align: center;
-    padding: 30px 0;
+    padding: 30px ;
     font-size: 1.2em;
     width: 100%;
-    
-    bottom: 0;
+    position: relative;
 }
 
 footer p {
@@ -151,7 +151,7 @@ footer p {
 }
 
 .contact-form button:hover {
-    background-color: #45a049;
+    background-color: darkgrey;
 }
 
 /* Responsive styling */

@@ -1,7 +1,9 @@
 <?php
+session_start();
 include 'connect.php';
 include 'functies/sideMenu.php';
-session_start();
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,11 +12,13 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boeken </title>
     <link rel="stylesheet" href="form.css">
-<link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="boeken.css">
 </head>
 <body>
     
 <h1>Boek hier een afspraak</h1>
+
 
 
 <div class="contact-form" data-aos="fade-up">
