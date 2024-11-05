@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $nieuwAdres = $_POST['adres'];
         $nieuwPostcode = $_POST['postcode'];
         $nieuwPlaats = $_POST['plaats'];
-        $nieuwTelefoonnummer = $_POST['telefoonnummer'];
+        $nieuwTelefoonnummer = $_POST['landcode'] . $_POST['telefoonnummer'];
 
         // Update de gegevens in de database
         $updateStmt = $mysqli->prepare("UPDATE tblklant SET klantnaam = ?, email = ?, adres = ?, postcode = ?, plaats = ?, telefoonnummer = ? WHERE klantnaam = ?");
@@ -82,22 +82,29 @@ if ($_SESSION['updated'] === true) {
 // Formulier voor gegevensbewerking met huidige waarden in de velden
 echo '<form method="POST" action="">';
 echo '<label for="klantnaam">Naam:</label>';
-echo '<input type="text" id="klantnaam" name="klantnaam" value="' . htmlspecialchars($user['klantnaam']) . '" placeholder="Voer uw naam in" required><br>';
+echo '<input type="text" id="klantnaam" name="klantnaam" value="' . $user['klantnaam'] . '" placeholder="Voer uw naam in" required><br>';
 
 echo '<label for="email">Email:</label>';
-echo '<input type="text" id="email" name="email" value="' . htmlspecialchars($user['email']) . '" placeholder="Voer uw email in" required><br>';
+echo '<input type="text" id="email" name="email" value="' . $user['email'] . '" placeholder="Voer uw email in" required><br>';
 
 echo '<label for="adres">Adres:</label>';
-echo '<input type="text" id="adres" name="adres" value="' . htmlspecialchars($user['adres']) . '" placeholder="Voer uw adres in" required><br>';
+echo '<input type="text" id="adres" name="adres" value="' . $user['adres'] . '" placeholder="Voer uw adres in" required><br>';
 
 echo '<label for="postcode">Postcode:</label>';
-echo '<input type="text" id="postcode" name="postcode" value="' . htmlspecialchars($user['postcode']) . '" placeholder="Voer uw postcode in" required><br>';
+echo '<input type="text" id="postcode" name="postcode" value="' . $user['postcode'] . '" placeholder="Voer uw postcode in" required><br>';
 
 echo '<label for="plaats">Plaats:</label>';
-echo '<input type="text" id="plaats" name="plaats" value="' . htmlspecialchars($user['plaats']) . '" placeholder="Voer uw plaats in" required><br>';
+echo '<input type="text" id="plaats" name="plaats" value="' . $user['plaats'] . '" placeholder="Voer uw plaats in" required><br>';
 
 echo '<label for="telefoonnummer">Telefoonnummer:</label>';
-echo '<input type="text" id="telefoonnummer" name="telefoonnummer" value="' . htmlspecialchars($user['telefoonnummer']) . '" placeholder="Voer uw telefoonnummer in" required><br>';
+echo '<div class="phone-input-group">';
+echo '<select id="landcode" name="landcode" onchange="formatPhoneNumber()">';
+echo '<option value="+32" data-flag="images/belgie.png" ' . (substr($user['telefoonnummer'], 0, 3) === "+32" ? "selected" : "") . '>🇧🇪 +32</option>';
+echo '<option value="+31" data-flag="images/nederland.png" ' . (substr($user['telefoonnummer'], 0, 3) === "+31" ? "selected" : "") . '>🇳🇱 +31</option>';
+echo '<option value="+33" data-flag="images/frankrijk.png" ' . (substr($user['telefoonnummer'], 0, 3) === "+33" ? "selected" : "") . '>🇫🇷 +33</option>';
+echo '</select>';
+echo '<input type="text" id="telefoonnummer" name="telefoonnummer" value="' . substr($user['telefoonnummer'], 3) . '" placeholder="Voer uw telefoonnummer in" required oninput="formatPhoneNumber()">';
+echo '</div><br>';
 
 echo '<input type="hidden" name="action" value="update">';
 echo '<input type="submit" value="Wijzig gegevens">';
@@ -117,15 +124,45 @@ echo '</form>';
 
 <script>
     function openNav() {
-        document.getElementById("sidenav").style.width = "250px"; 
+        document.getElementById("sidenav").style.width = "250px"; // Open de sidenav
     }
 
     function closeNav() {
-        document.getElementById("sidenav").style.width = "0"; 
+        document.getElementById("sidenav").style.width = "0"; // Sluit de sidenav
     }
 
+    AOS.init();
     function confirmDelete() {
         return confirm("Weet je zeker dat je je account wilt verwijderen? Dit kan niet ongedaan gemaakt worden.");
+    }
+
+    // Verberg de succesmelding na 10 seconden
+    setTimeout(function() {
+        const successMessage = document.querySelector('.success-message');
+        if (successMessage) {
+            successMessage.style.display = 'none';
+        }
+    }, 10000); // 10000 milliseconden = 10 seconden
+
+    function formatPhoneNumber() {
+        const phoneInput = document.getElementById('telefoonnummer');
+        const landcode = document.getElementById('landcode').value;
+
+        // Verwijder alle niet-numerieke karakters
+        let phoneNumber = phoneInput.value.replace(/\D/g, '');
+
+        // Voeg spaties toe volgens de gewenste indeling
+        if (phoneNumber.length > 3) {
+            phoneNumber = phoneNumber.slice(0, 3) + ' ' + phoneNumber.slice(3);
+        }
+        if (phoneNumber.length > 6) {
+            phoneNumber = phoneNumber.slice(0, 6) + ' ' + phoneNumber.slice(6);
+        }
+        if (phoneNumber.length > 9) {
+            phoneNumber = phoneNumber.slice(0, 9) + ' ' + phoneNumber.slice(9);
+        }
+
+        phoneInput.value = phoneNumber.trim();
     }
 </script>
 </body>

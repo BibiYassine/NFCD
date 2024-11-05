@@ -13,6 +13,7 @@ include 'functies/sideMenu.php';
     <title>Boeken </title>
     <link rel="stylesheet" href="form.css">
     <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="terug.css">
     <link rel="stylesheet" href="boeken.css">
 </head>
 <body>
@@ -22,20 +23,22 @@ include 'functies/sideMenu.php';
 
 
 <div class="contact-form" data-aos="fade-up">
-                <h2 data-aos="fade-up">Stuur ons een bericht</h2>
-                <form action="mailto:needforcardetailing@gmail.com" method="post" enctype="text/plain">
-                    <label for="name" data-aos="fade-up">Naam:</label>
-                    <input type="text" id="name" name="name" required>
+    <h2 data-aos="fade-up">Stuur ons een bericht</h2>
+    <form action="mailto:needforcardetailing@gmail.com" method="post" enctype="text/plain">
+        <label for="name" data-aos="fade-up">Naam:</label>
+        <input type="text" id="name" name="name" required>
 
-                    <label for="email" data-aos="fade-up">Email:</label>
-                    <input type="email" id="email" name="email" required>
+        <label for="email" data-aos="fade-up">Email:</label>
+        <input type="email" id="email" name="email" required>
 
-                    <label for="message" data-aos="fade-up">Bericht:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+        <label for="message" data-aos="fade-up">Bericht:</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Dag: Tijdstip: Service: Locatie:"></textarea>
 
-                    <button type="submit" data-aos="fade-up">Verstuur</button>
-                </form>
-            </div>
+        <button type="submit" data-aos="fade-up">Verstuur</button>
+    </form>
+</div>
+
+
         </section>
     </main>
 

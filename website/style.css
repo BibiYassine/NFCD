@@ -31,7 +31,7 @@ h1, h2, h3, p {
 .book-button:hover {
     background-color: darkgrey; /* Donkerdere blauwe kleur bij hover */
 }
-main {
+main{
     background-image: url(images/responsive.png);
     background-repeat: no-repeat;
     /* Gebruik cover voor een betere responsiviteit */
@@ -263,6 +263,41 @@ footer {
     padding: 30px 0;
     font-size: 1.2em;
     width: 100%;
+    clear: both; /* Clear any floating elements */
+    position: relative;
+    bottom: 0;
+}
+
+
+.contact-form {
+    margin-top: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: darkgrey;
 }
 
 footer p {
@@ -275,6 +310,7 @@ footer p {
     main {
         background-image: url(images/bg.png);
         background-repeat: no-repeat;
+        height: 100vh;
     }
 
 
