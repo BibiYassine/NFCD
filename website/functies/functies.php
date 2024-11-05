@@ -1,4 +1,7 @@
+
 <?php
+
+
 function controleerAdmin($mysqli) {
     if (!isset($_SESSION['klantnaam'])) {
         header('Location: index.php');

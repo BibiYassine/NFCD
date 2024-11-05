@@ -1,3 +1,10 @@
+<?php
+session_start();
+    include 'connect.php';
+    include 'functies/sideMenu.php';
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,13 +16,7 @@
     <link rel="stylesheet" href="libraries/aos.css">
     
 </head>
-<body data-aos="fade-up">
-
-<?php
-    include 'connect.php';
-    session_start();
-    include 'functies/sideMenu.php';
-?>
+<body>
 
 <main>
     <section class="services-section">
