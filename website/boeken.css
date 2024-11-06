@@ -1,12 +1,14 @@
 html, body {
     height: 100%;
-    width: 100%;    
+    width: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: white;
     color: black;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
+    min-height: 100vh;
 }
 
 .contact-form {
@@ -14,10 +16,12 @@ html, body {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 300px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
+    flex-grow: 1; /* Pushes footer to the bottom when needed */
 }
 
 .contact-form label {
@@ -55,12 +59,12 @@ footer {
     padding: 30px;
     font-size: 1.2em;
     width: 100%;
-    position: relative;
+    color: #fdf8f8;
+    bottom: 0;
 }
 
 footer p {
     margin: 0;
-    color: #fdf8f8;
 }
 
 .sidenav {
@@ -129,7 +133,8 @@ footer p {
 
     .contact-form {
         padding: 10px;
-        margin-top: 20px;
+        margin-top: 25px;
+        
     }
 
     .contact-form button {
@@ -140,6 +145,4 @@ footer p {
     .contact-form textarea {
         font-size: 1em;
     }
-
-  
 }

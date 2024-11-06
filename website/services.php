@@ -1,9 +1,13 @@
 <?php
-session_start();
-    include 'connect.php';
-    include 'functies/sideMenu.php';
-    
-?>
+
+         include 'connect.php';
+            session_start();
+         //initaliseerd de klant variabele zodat er verder geen errors komen voor bezoekers die niet zijn ingelogd.
+            if(!isset($_SESSION['type'])){
+                $_SESSION['type'] = "gast";
+            }
+            include 'functies/sideMenu.php';
+      ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,6 +18,7 @@ session_start();
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="services.css">
     <link rel="stylesheet" href="libraries/aos.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     
 </head>
 <body>
@@ -88,13 +93,14 @@ session_start();
     AOS.init();
 
     // JavaScript voor het openen en sluiten van het menu
+    function closeNav() {
+        document.getElementById("sidenav").style.width = "0";
+    }
     function openNav() {
         document.getElementById("sidenav").style.width = "250px"; // Pas de breedte aan naar wens
     }
 
-    function closeNav() {
-        document.getElementById("sidenav").style.width = "0";
-    }
+    
 
     // JavaScript voor de slider
     document.addEventListener('DOMContentLoaded', function() {
