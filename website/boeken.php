@@ -22,28 +22,7 @@ onderhoudsModus();
 <br>
 <br>
 <br>
-<div class="contact-form" data-aos="fade-up">
-    <h2 data-aos="fade-up">Boek hier je afspraak</h2>
-    <form action="mailto:needforcardetailing@gmail.com" method="post" enctype="text/plain">
-        <label for="name" data-aos="fade-up">Naam:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email" data-aos="fade-up">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="phone" data-aos="fade-up">Telefoonnummer:</label>
-        <input type="tel" id="phone" name="phone" required>
-
-        <label for="message" data-aos="fade-up">Bericht:</label>
-        <textarea id="message" name="message" rows="5" required placeholder="Dag: Tijdstip: Service: Locatie:"></textarea>
-
-        <button type="submit" data-aos="fade-up">Verstuur</button>
-    </form>
-</div>
-
-
-        </section>
-    </main>
+    <h3>Boek hier je afspraak</h3>
 
    
     <script src="libraries/aos.js"></script>

@@ -9,7 +9,7 @@ echo '<div class="sidenav" id="sidenav">
             echo '<a href="admin">Admin Panel</a>';
         } 
         else if ($_SESSION['type'] == "klant") {
-            echo '';
+            echo '<a href="afspraken">Mijn afspraken</a>';
         }
         
         else {

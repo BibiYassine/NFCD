@@ -33,8 +33,9 @@ h1, h2, h3, p {
 }
 main {
     
-    background-color: rgb(111, 111, 111);
+    
     background-repeat: no-repeat;
+    background-image: url(images/responsive.png);
     /* Gebruik cover voor een betere responsiviteit */
 }
 
@@ -96,19 +97,19 @@ main {
 .hero h1 {
     font-size: 3em;
     margin: 0;
-    color: black;
+    color: white;
 }
 
 .hero p {
     font-size: 1.2em;
     margin: 15px 0;
-    color: black;
+    color: white;
 }
 
 .btn {
     text-decoration: none;
     background-color: transparent;
-    color: black;
+    color: white;
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s;
