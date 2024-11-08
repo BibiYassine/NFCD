@@ -16,7 +16,7 @@ include 'functies/functies.php';
 controleerAdmin($mysqli);
 ?>
     <div class="adminpageCenter">
-    <h2 class="titel1">Maintenance Mode</h2><br>
+    <h2 class="titel1">Onderhoudsmodus</h2><br>
 
     <?php
     // Check if maintenance mode is on or off
@@ -25,12 +25,12 @@ controleerAdmin($mysqli);
 
     if ($result1 && $result1->num_rows > 0) {
         echo "Onderhoudsmodus<br>";
-        echo "<form action='adminonderhoud.php' method='post'>
+        echo "<form action='adminonderhoud' method='post'>
                 <input type='submit' name='off' value='Zet onderhoudsmodus uit'><br>
               </form>"; 
     } else {
         echo "Onderhoudsmodus uit<br>";
-        echo "<form action='adminonderhoud.php' method='post'>
+        echo "<form action='adminonderhoud' method='post'>
                 <input type='submit' name='on' value='Zet onderhoudsmodus aan'><br>
               </form>";
     }
@@ -40,7 +40,7 @@ controleerAdmin($mysqli);
         if (isset($_POST['on'])) {
             $sql = "UPDATE tbladmin SET functiewaarde = 1 WHERE functienaam = 'onderhoudmodus'";
             if ($mysqli->query($sql)) {
-                header("Refresh: 1; url=adminonderhoud.php");
+                header("Refresh: 1; url=adminonderhoud");
                 exit;
             } else {
                 echo "Failed to enable maintenance mode.";
@@ -48,7 +48,7 @@ controleerAdmin($mysqli);
         } elseif (isset($_POST['off'])) {
             $sql = "UPDATE tbladmin SET functiewaarde = 0 WHERE functienaam = 'onderhoudmodus'";
             if ($mysqli->query($sql)) {
-                header("Refresh: 1; url=adminonderhoud.php");
+                header("Refresh: 1; url=adminonderhoud");
                 exit;
             } else {
                 echo "Failed to disable maintenance mode.";

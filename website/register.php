@@ -22,7 +22,7 @@ if (isset($_POST['klantnaam']) && isset($_POST['wachtwoord']) && isset($_POST['e
         $stmt = $mysqli->prepare($sql);
         $stmt->bind_param("ssss", $klantnaam, $wachtwoord, $email, $type); // Binding the parameters
         if ($stmt->execute()) {
-            header ('Location: succes.html');
+            header ('Location: succes');
         } else {
             echo "Er ging iets fout bij de registratie.";
         }
@@ -42,7 +42,7 @@ if (isset($_POST['klantnaam']) && isset($_POST['wachtwoord']) && isset($_POST['e
 <body>
     <div class="form">
     <h2>Registreren</h2>
-    <form action="register.php" method="POST">
+    <form action="register" method="POST">
         <label>Klantnaam:</label>
         <input type="text" name="klantnaam" required><br><br>
         <label>Email:</label>

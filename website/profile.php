@@ -21,7 +21,7 @@ onderhoudsModus();
 
 // Controleer of de gebruiker is ingelogd
 if (!isset($_SESSION['klantnaam'])) {
-    header("Location: login.php");
+    header("Location: login");
     exit();
 }
 
@@ -113,7 +113,7 @@ echo '<input type="submit" value="Verwijder Account" style="color: red;">';
 echo '</form>';
 
 // Voeg een knop toe om uit te loggen
-echo '<form method="POST" action="logout.php">';
+echo '<form method="POST" action="logout">';
 echo '<input type="submit" value="Log uit">';
 echo '</form>';
 ?>

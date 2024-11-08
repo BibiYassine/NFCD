@@ -42,7 +42,7 @@
                 <p data-aos="fade-up">- Dashboard, deurpanelen en stuur behandelen met stoomreiniger.</p>
                 <p data-aos="fade-up">- Buitenkant wassen.</p>
                 <p data-aos="fade-up">- Duur: 30 minuten.</p>
-                <a href="boeken.php" class="book-button">Boek nu</a> <!-- Button added here -->
+                <a href="boeken" class="book-button">Boek nu</a> <!-- Button added here -->
             </div>
 
             <div class="service-item" data-aos="fade-up">
@@ -56,7 +56,7 @@
                 <p data-aos="fade-up">- Afstoffen.</p>
                 <p data-aos="fade-up">- Dashboard, deurpanelen en stuur reinigen en met stoomreiniger behandelen.</p>
                 <p data-aos="fade-up">- Duur: 3 uur.</p>
-                <a href="boeken.php" class="book-button">Boek nu</a> <!-- Button added here -->
+                <a href="boeken" class="book-button">Boek nu</a> <!-- Button added here -->
             </div>
 
             <div class="service-item" data-aos="fade-up">
@@ -74,7 +74,7 @@
                 <p data-aos="fade-up">- Motorruimte reinigen.</p>
                 <p data-aos="fade-up">- Lakbescherming aanbrengen.</p>
                 <p data-aos="fade-up">- Duur: 6 uur.</p>
-                <a href="boeken.php" class="book-button">Boek nu</a> <!-- Button added here -->
+                <a href="boeken" class="book-button">Boek nu</a> <!-- Button added here -->
             </div>
         </div>
     </section>
