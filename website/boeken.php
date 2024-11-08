@@ -2,6 +2,8 @@
 session_start();
 include 'connect.php';
 include 'functies/sideMenu.php';
+include 'functies/functies.php';
+onderhoudsModus();
 
 
 ?>
@@ -11,8 +13,8 @@ include 'functies/sideMenu.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boeken </title>
-    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="boeken.css">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
 </head>
 <body>
     
@@ -28,6 +30,9 @@ include 'functies/sideMenu.php';
 
         <label for="email" data-aos="fade-up">Email:</label>
         <input type="email" id="email" name="email" required>
+
+        <label for="phone" data-aos="fade-up">Telefoonnummer:</label>
+        <input type="tel" id="phone" name="phone" required>
 
         <label for="message" data-aos="fade-up">Bericht:</label>
         <textarea id="message" name="message" rows="5" required placeholder="Dag: Tijdstip: Service: Locatie:"></textarea>

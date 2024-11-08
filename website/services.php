@@ -7,6 +7,9 @@
                 $_SESSION['type'] = "gast";
             }
             include 'functies/sideMenu.php';
+            include 'functies/functies.php';
+            
+            onderhoudsModus();
       ?>
 
 <!DOCTYPE html>
@@ -15,7 +18,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services-NFCD</title>
-    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="services.css">
     <link rel="stylesheet" href="libraries/aos.css">
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">

@@ -23,4 +23,20 @@ function controleerAdmin($mysqli) {
         exit();
     }
 }
+
+function onderhoudsModus()
+{
+   include 'connect.php';
+   
+
+   $sql = "SELECT functiewaarde FROM tbladmin where functienaam = 'onderhoudmodus'";
+   $result = $mysqli->query($sql);
+   $row = $result->fetch_assoc();
+
+   if ($row["functiewaarde"] == 1) {
+      header("Location: onderhoudsPagina.php");
+   }
+}
+
+
 ?>

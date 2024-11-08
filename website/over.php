@@ -14,6 +14,8 @@
     include 'connect.php';
     session_start();
     include 'functies/sideMenu.php';
+    include 'functies/functies.php';
+    onderhoudsModus();
 ?>
 <main>
     <section class="about-section">

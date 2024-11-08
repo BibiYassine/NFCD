@@ -15,6 +15,9 @@
 include 'connect.php';
 session_start();
 include 'functies/sideMenu.php';
+include 'functies/functies.php';
+
+onderhoudsModus();
 
 // Controleer of de gebruiker is ingelogd
 if (!isset($_SESSION['klantnaam'])) {

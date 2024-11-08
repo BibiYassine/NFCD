@@ -10,9 +10,8 @@
     <link rel="stylesheet" href="libraries/aos.css">
     
 </head>
-<body data-aos="fade-up">
+<body>
 <?php
-
          include 'connect.php';
             session_start();
          //initaliseerd de klant variabele zodat er verder geen errors komen voor bezoekers die niet zijn ingelogd.
@@ -20,6 +19,8 @@
                 $_SESSION['type'] = "gast";
             }
             include 'functies/sideMenu.php';
+            include 'functies/functies.php';
+            onderhoudsModus();
       ?>
 
 
@@ -33,7 +34,7 @@
         </section>
     
 
-    <div data-aos="fade-up">
+    <div>    
         <section id="faq" class="faq" data-aos="fade-up">
             <h2>Veel Gestelde Vragen (FAQ)</h2>
             <p>Dit zijn de meest gestelde vragen die wij krijgen als detailing bedrijf.</p>
@@ -56,7 +57,7 @@
             </div>
         </section>
     </div>
-        <section id="services" class="services" data-aos="fade-up">
+        <section id="services" class="services">
             <h2>Wat bieden we aan?</h2>
             <p>Hieronder vindt u een overzicht van onze diensten:</p>
             <br>
@@ -78,14 +79,14 @@
                     <p data-aos="fade-up">Professionele reiniging en onderhoud van lederen bekleding.</p>
                 </div>
                 <div class="service-item" data-aos="fade-up">
-                    <img src="images/interieur.png" alt="Interieur Reiniging">
+                    <img src="images/pakket12.png" alt="Interieur Reiniging">
                     <h3 data-aos="fade-up">Interieur Reiniging</h3>
                     <p data-aos="fade-up" >Grondige reiniging van het interieur van uw auto.</p>
                 </div>
             </div>
         </section>
 
-        <section id="car-types" class="car-types" data-aos="fade-up">
+        <section id="car-types" class="car-types">
             <h2 data-aos="fade-up">Welke types auto's doen we?</h2>
             <p data-aos="fade-up">Wij bieden detailing aan voor verschillende soorten auto's:</p>
             <div class="car-types-container">
@@ -128,6 +129,5 @@
 
         AOS.init();
     </script>
-
 </body>
 </html>
