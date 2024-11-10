@@ -6,7 +6,7 @@ function controleerAdmin($mysqli) {
     if (!isset($_SESSION['klantnaam'])) {
         header('Location: index');
         exit();
-    }
+    }   
     // Haal de type van de klant op
     $klantnaam = $_SESSION['klantnaam'];
     $stmt = $mysqli->prepare("SELECT type FROM tblklant WHERE klantnaam = ?");

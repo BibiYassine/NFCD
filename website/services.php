@@ -15,7 +15,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services-NFCD</title>
-    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="services.css">
     <link rel="stylesheet" href="libraries/aos.css">
     
@@ -49,8 +49,8 @@
 
             <div class="service-item" data-aos="fade-up">
                 <div class="slider">
-                    <img src="images/pakket2.png" alt="Refresh Pakket 1" class="slider-image">
-                    <img src="images/pakket22.png" alt="Refresh Pakket 2" class="slider-image">
+                    <img src="images/alcantara.png" alt="Refresh Pakket 1" class="slider-image">
+                    <img src="images/refresh.png" alt="Refresh Pakket 2" class="slider-image">
                 </div>
                 <h3 data-aos="fade-up">Refresh - €80</h3>
                 <p data-aos="fade-up">Dieptereinigen van stoelen, matten, vloer.</p>
@@ -69,8 +69,8 @@
 
             <div class="service-item" data-aos="fade-up">
                 <div class="slider">
-                    <img src="images/pakket3.png" alt="Diamond Pakket 1" class="slider-image">
-                    <img src="images/luxere.png" alt="Diamond Pakket 2" class="slider-image">
+                    <img src="images/refresh.png" alt="Diamond Pakket 1" class="slider-image">
+                    <img src="images/ext.png" alt="Diamond Pakket 2" class="slider-image">
                 </div>
                 <h3 data-aos="fade-up">Diamond - €130</h3>
                 <p data-aos="fade-up">Dieptereinigen van stoelen, matten, vloer.</p>

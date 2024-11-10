@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="libraries/aos.css">
     
 </head>
-<body data-aos="fade-up">
+<body>
 
 <?php
 

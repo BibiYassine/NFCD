@@ -27,6 +27,7 @@
 
     
     <main>
+    
         <section id="home" class="hero">
             <h1>Welkom op de officiële website van NFCD</h1>
             <p>Needforcardetailing, Het detail bedrijf dat uw wagen nodig heeft.</p>
@@ -64,12 +65,12 @@
             <a href="services.php" class="book-button">Boek nu</a>
             <div class="services-container" data-aos="fade-up">
             <div class="service-item" data-aos="fade-up">
-                    <img src="images/luxere.png" alt="Alcantara Cleaning">
+                    <img src="images/alcantara.png" alt="Alcantara Cleaning">
                     <h3 data-aos="fade-up">Alcantara Cleaning</h3>
                     <p data-aos="fade-up">Specialistische reiniging voor Alcantara stoffen.</p>
                 </div>
                 <div class="service-item">
-                <img src="images/pakket22.png" alt="Dieptereiniging">
+                <img src="images/ext.png" alt="Dieptereiniging">
                     <h3 data-aos="fade-up">Dieptereiniging</h3>
                     <p data-aos="fade-up">Een grondige reiniging van uw voertuig, van binnen en buiten.</p>
                 </div>
@@ -99,15 +100,13 @@
                     <h3 data-aos="fade-up">Normale Auto's/SUV</h3>
                 </div>
                 <div class="car-type-item" data-aos="fade-up">
-                    <img src="images/audi.png" alt="Supercar">
+                    <img src="images/jaguar.png" alt="Supercar">
                     <h3 data-aos="fade-up">Luxere Auto's</h3>
                 </div>
                
             </div>
         </section>
-    </main>
-
-    <footer data-aos="fade-up">
+        <footer data-aos="fade-up">
         <p>&copy; 2024 NeedForCarDetailing.</p>
         <br>
         <div class="insta">
@@ -116,6 +115,9 @@
             </a>
         </div>
     </footer>
+    </main>
+    
+ 
 
     <script src="libraries/aos.js"></script>
     <script>
