@@ -49,6 +49,7 @@ if (isset($_POST['klantnaam']) && isset($_POST['wachtwoord']) && isset($_POST['e
     <link rel="stylesheet" href="form.css">
 </head>
 <body>
+    
     <div class="form">
     <h2>Registreren</h2>
     <form action="register.php" method="POST">

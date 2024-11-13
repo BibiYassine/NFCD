@@ -9,10 +9,14 @@ html, body {
     font-family: Arial, sans-serif;
 }
 
+:root{
+    --grey1 : black;
+}
+
 
 
 h1, h2, h3, p {
-    color: black;
+    color: var(--grey1);
 }
 
 .book-button {
@@ -20,7 +24,7 @@ h1, h2, h3, p {
     padding: 10px 20px;
     margin-top: 10px;
     margin-bottom: 5px;
-    background-color: black; 
+    background-color: var(--grey1); 
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -51,7 +55,7 @@ main {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: black;
+    background-color: #263238;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;

@@ -12,9 +12,10 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    margin-bottom: 0;
 }
 
-img{
+img {
     cursor: pointer;
 }
 
@@ -26,7 +27,7 @@ img{
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: black;
+    background-color: #263238;
     overflow-x: hidden;
     transition: 0.5s; /* Zorgt voor een soepele overgang */
     padding-top: 60px;
@@ -55,12 +56,12 @@ img{
 /* Hamburger menu */
 .menu-toggle {
     display: block;
-    font-size: 45px;
+    font-size: 50px;
     cursor: pointer;
     position: absolute;
     top: 10px;
     left: 10px;
-    color: black;
+    color: #263238;
 }
 
 /* Hero sectie */
@@ -80,14 +81,12 @@ img{
 }
 
 .about-image {
-     /* Zorg ervoor dat de afbeelding niet te groot wordt */
+    /* Zorg ervoor dat de afbeelding niet te groot wordt */
     height: auto;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
-
-
 
 /* Tekstinhoud */
 .text-content {
@@ -144,6 +143,129 @@ p {
     color: rgb(27, 27, 27);
 }
 
+/*footer*/
+footer {
+    background-color: #263238;
+    min-height: 250px;
+    padding: 10px 0px 25px 0px;
+    margin-top: auto; /* Zorgt ervoor dat de footer naar de onderkant van de pagina wordt gedrukt */
+}
+
+.col_white_amrc {
+    color: #FFF;
+}
+
+.pt2 {
+    padding-top: 40px;
+}
+
+footer p {
+    font-size: 13px;
+    color: #CCC;
+    padding-bottom: 0px;
+    margin-bottom: auto;
+}
+
+.mb10 {
+    padding-bottom: 15px;
+}
+
+.footer_ul_amrc {
+    margin: 0px;
+    list-style-type: none;
+    font-size: 14px;
+    padding: 0px 0px 10px 0px;
+}
+
+.footer_ul_amrc li {
+    padding: 0px 0px 5px 0px;
+}
+
+.footer_ul_amrc li a {
+    color: #CCC;
+}
+
+.footer_ul_amrc li a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.fleft {
+    float: left;
+}
+
+.footer_ul2_amrc {
+    margin: 0px;
+    list-style-type: none;
+    padding: 0px;
+}
+
+.footer_ul2_amrc li p {
+    display: table;
+}
+
+.footer_ul2_amrc li a:hover {
+    text-decoration: none;
+}
+
+.footer_ul2_amrc li i {
+    margin-top: 5px;
+}
+
+.bottom_border {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 20px;
+}
+
+.foote_bottom_ul_amrc {
+    list-style-type: none;
+    padding: 0px;
+    display: table;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.foote_bottom_ul_amrc li {
+    display: inline;
+}
+
+.foote_bottom_ul_amrc li a {
+    color: #fff;
+    margin: 0 12px;
+}
+
+.social_footer_ul {
+    display: table;
+    margin: 15px auto 0 auto;
+    list-style-type: none;
+}
+
+.social_footer_ul li {
+    padding-left: 20px;
+    padding-top: 10px;
+    float: left;
+}
+
+.social_footer_ul li a {
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 8px;
+    border-radius: 50%;
+    text-decoration: none;
+}
+
+.social_footer_ul li i {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+.container {
+    background-color: #263238;
+    bottom: 0;
+    position: relative;
+}
 
 /* Responsive styling */
 @media (max-width: 768px) {
@@ -156,53 +278,52 @@ p {
         text-align: center;
     }
 
-    .about-image  {
+    .about-image {
         margin-top: 40px;
         max-width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    .text-content{
+
+    .text-content {
         margin-top: 40px;
         max-width: 100%;
     }
+
     /* Flip Container */
-.flip-container {
-    perspective: 1000px;
-    width: 350px;
-    height: 250px;
-   
-}
+    .flip-container {
+        perspective: 1000px;
+        width: 350px;
+        height: 250px;
+    }
 
-/* Flipper */
-.flipper {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: transform 0.6s;
-}
+    /* Flipper */
+    .flipper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: transform 0.6s;
+    }
 
-.flip-container.flipped .flipper {
-    transform: rotateY(180deg);
-}
+    .flip-container.flipped .flipper {
+        transform: rotateY(180deg);
+    }
 
-/* Front and Back Images */
-.front-image, .back-image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-}
+    /* Front and Back Images */
+    .front-image, .back-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+    }
 
-.back-image {
-    transform: rotateY(180deg);
-}
+    .back-image {
+        transform: rotateY(180deg);
+    }
 
     .menu-toggle {
         color: black;
     }
 }
-
-

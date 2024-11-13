@@ -14,7 +14,7 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: black;
+    background-color: #263238;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -47,7 +47,7 @@ body {
     position: absolute;
     top: 10px;
     left: 10px;
-    color: black;
+    color: #263238;
 }
 
 
@@ -83,7 +83,7 @@ select {
 }
 
 button {
-    background-color: black;
+    background-color: #263238;
     color: white;
     padding: 10px;
     margin-top: 20px;

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afspraak Bevestiging</title>
+    <style>
+        /* Algemene stijlen voor de e-mail */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin-top: 20px;
+            padding: 0;
+        }
+        .email-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .email-header {
+            background-color: black;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+        .email-body {
+            padding: 20px;
+        }
+        .email-footer {
+            background-color: #f4f4f4;
+            padding: 10px;
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+        }
+        .details {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        p {
+            margin: 0 0 10px;
+        }
+        .bold {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="email-header">
+            <h1>Bevestiging van uw Afspraak</h1>
+        </div>
+        <div class="email-body">
+            <p>Beste [Naam],</p>
+            <p>Bedankt voor het maken van een afspraak bij [Bedrijfsnaam]. Hier zijn de details van uw afspraak:</p>
+            
+            <div class="details">
+                <p><span class="bold">Naam:</span> [Naam]</p>
+                <p><span class="bold">E-mailadres:</span> [E-mailadres]</p>
+                <p><span class="bold">Service:</span> [Service]</p>
+                <p><span class="bold">Datum:</span> [Datum]</p>
+                <p><span class="bold">Tijd:</span> [Tijd]</p>
+                <p><span class="bold">Locatie:</span> [Locatie]</p>
+                <p><span class="bold">Prijs:</span> €[Prijs]</p>
+            </div>
+
+            <p>Als u vragen heeft of de afspraak wilt wijzigen, neem dan gerust contact met ons op via [E-mailadres Bedrijf] of [Telefoonnummer Bedrijf].</p>
+        </div>
+        <div class="email-footer">
+            <p>&copy; 2024 [Bedrijfsnaam]. Alle rechten voorbehouden.</p>
+            <p>[Adres Bedrijf] | [Telefoonnummer Bedrijf] | [E-mailadres Bedrijf]</p>
+        </div>
+    </div>
+</body>
+</html>

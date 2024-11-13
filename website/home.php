@@ -125,7 +125,7 @@
 <p class="mb10">NFCD, het bedrijf dat uw wagen nodig heeft om er zo nieuw mogelijk uit te zien. Wij behandelen met alle plezier auto's die gedeepcleaned moeten worden, auto's die er terug showroom ready moeten uitzien. Dus aarzel niet om een afspraak te boeken.</p>
 <br>
 
-<p><a href="https://www.google.com/maps/dir/51.0518685,4.5186688/Mechelsesteenweg+164,+Sint-Katelijne-Waver+2860+Sint-Katelijne-Waver,+Belgi%C3%AB/@51.0518395,4.4362685,12z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x47c3e48aecc3e83f:0xf833427cd19a530!2m2!1d4.5186688!2d51.0518685?entry=ttu&g_ep=EgoyMDI0MTExMC4wIKXMDSoASAFQAw%3D%3D"><i class="fa fa-location-arrow"></i> Mechelsesteenweg 164 2860 Sint-Katelijne-Waver </p></a>
+<p><a href="https://www.google.be/maps/place/Mechelsesteenweg,+2860+Sint-Katelijne-Waver/@51.0523262,4.5174803,17z/data=!3m1!4b1!4m6!3m5!1s0x47c3e4f4b7a5b4fb:0x3ad639d2357511a9!8m2!3d51.0523262!4d4.5200552!16s%2Fg%2F1tdr2grh?hl=nl&entry=ttu&g_ep=EgoyMDI0MTExMS4wIKXMDSoASAFQAw%3D%3D"><i class="fa fa-location-arrow"></i> Mechelsesteenweg 2860 Sint-Katelijne-Waver </p></a>
 <p><i class="fa fa-phone"></i>  +32 499 91 21 81 </p>
 <p><i class="fa fa fa-envelope"></i> needforcardetailing@gmail.com </p>
 
@@ -137,9 +137,9 @@
 <!--headin5_amrc-->
 <ul class="footer_ul_amrc">
 <li><a href="services">Onze Pakketen</a></li>
-<li><a href="#car-types">Cartypes</a></li>
+<li><a href="home#services">Wat bieden we aan?</a></li>
 <li><a href="contact#gemeentes">Welke steden?</a></li>
-<li><a href="#faq">Faq</a></li>
+<li><a href="home#faq">Faq</a></li>
 </ul>
 <!--footer_ul_amrc ends here-->
 </div>
@@ -147,12 +147,9 @@
 <div class="container">
 <ul class="foote_bottom_ul_amrc">
 <li><a href="home">Home</a></li>
-<li><a href="over">Over NFCD</a></li>
 <li><a href="services">Services</a></li>
 <li><a href="contact">Contact</a></li>
-<li><a href="login">Login</a></li>
 <li><a href="register">Register</a></li>
-<li><a href="https://www.google.com/maps/dir/51.0518685,4.5186688/Mechelsesteenweg+164,+Sint-Katelijne-Waver+2860+Sint-Katelijne-Waver,+Belgi%C3%AB/@51.0518395,4.4362685,12z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x47c3e48aecc3e83f:0xf833427cd19a530!2m2!1d4.5186688!2d51.0518685?entry=ttu&g_ep=EgoyMDI0MTExMC4wIKXMDSoASAFQAw%3D%3D">Locatie</a></li>
 </ul>
 <!--foote_bottom_ul_amrc ends here-->
 <p class="text-center">Copyright @2024 | Designed With by NeedForCarDetailing</p>

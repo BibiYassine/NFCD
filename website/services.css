@@ -19,7 +19,7 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: black;
+    background-color: #263238;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -51,7 +51,7 @@ body {
     position: absolute;
     top: 10px;
     left: 10px;
-    color: black;
+    color: #263238;
 }
 
 .services-section {
@@ -128,14 +128,14 @@ body {
 .service-item p::before {
     content: "✔️"; /* Vink-icoon voor een mooi accent */
     font-size: 1.2em;
-    color: black; /* Kleur die overeenkomt met de linker accentlijn */
+    color: #263238; /* Kleur die overeenkomt met de linker accentlijn */
     margin-right: 10px;
 }
 
 .niet p::before{
     content: "❌"; /* Vink-icoon voor een mooi accent */
     font-size: 1.2em;
-    color: black; /* Kleur die overeenkomt met de linker accentlijn */
+    color: #263238; /* Kleur die overeenkomt met de linker accentlijn */
     margin-right: 10px;
 }
 
@@ -147,7 +147,7 @@ body {
     border-radius: 20px;
     padding: 10px 20px;
     margin-bottom: 20px;
-    background-color: black; /* Aantrekkelijke blauwe kleur */
+    background-color: 263238; /* Aantrekkelijke blauwe kleur */
     color: white;
     text-decoration: none;
     transition: background-color 0.3s ease;
@@ -207,6 +207,10 @@ footer p { font-size:13px; color:#CCC; padding-bottom:0px; margin-bottom:8px;}
 
 @media (max-width: 768px) {
 
+    h1{
+        margin-top: 25px;
+    }
+
     .services-container {
         flex-direction: column;
         align-items: center;
@@ -224,7 +228,7 @@ footer p { font-size:13px; color:#CCC; padding-bottom:0px; margin-bottom:8px;}
         border-radius: 20px;
         padding: 10px 20px;
         margin-bottom: 50px;
-        background-color: black; /* Aantrekkelijke blauwe kleur */
+        background-color: #263238; /* Aantrekkelijke blauwe kleur */
         color: white;
         text-decoration: none;
         transition: background-color 0.3s ease;

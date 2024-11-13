@@ -21,7 +21,7 @@ echo '<div class="sidenav" id="sidenav">
 if (isset($_SESSION['type']) && ($_SESSION['type'] == "admin" || $_SESSION['type'] == "eigenaar" || $_SESSION['type'] == "klant")) {
     // Link naar profiel en uitloggen voor ingelogde gebruikers
     echo '<a href="profile"><img src="images/prof.png" class="profile-icon" width="32" height="32" alt="Profile Icon"></a>';
-    echo '<a href="logout"><img src="images/loguit.png" class="profile-icon" width="32" height="32" alt="Logout Icon"></a>';
+    echo '<a href="logout"><img src="images/loguit.png" class="profile-icon" width="42" height="42" alt="Logout Icon"></a>';
 }
     // Extra link naar admin pagina voor beheerders
 

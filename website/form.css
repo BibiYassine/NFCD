@@ -65,7 +65,7 @@ input [type= "email"]:focus  {
 input[type="submit"] {
     width: 100%; /* Full width button */
     padding: 10px; /* Space inside the button */
-    background-color: black; /* Blue background */
+    background-color: #263238; /* Blue background */
     color: white; /* White text */
     border: none; /* No border */
     border-radius: 4px; /* Rounded corners */

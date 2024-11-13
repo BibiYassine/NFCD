@@ -38,7 +38,7 @@ p {
 /* Button styling for links */
 .lijst a.btn {
     display: inline-block;
-    background-color: black;
+    background-color: #263238;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -62,7 +62,7 @@ p {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: black;
+    background-color: #263238;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -96,7 +96,7 @@ p {
     position: absolute;
     top: 10px;
     left: 10px;
-    color: black;
+    color: #263238;
 }
 
 /* Responsive adjustments */

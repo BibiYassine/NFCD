@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email'])) {
         $update_stmt->execute();
 
  
-        $reset_link = "http://localhost/yassine/nfcd/website/reset_password?token=" . $token;
+        $reset_link = "http://needforcardetailing.be/reset_password?token=" . $token;
 
 
         $mail = new PHPMailer(true);
@@ -37,15 +37,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['email'])) {
         try {
            
             $mail->isSMTP();
-            $mail->Host = 'smtp.gmail.com';  // Gmail SMTP server
+            $mail->Host = 'smtp.hostinger.com';  
             $mail->SMTPAuth = true;
-            $mail->Username = 'needforcardetailing@gmail.com';  
-            $mail->Password = 'bkul eakb njoi ffdj';  
+            $mail->Username = 'info@needforcardetailing.be';  
+            $mail->Password = 'w365_LL1571';
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port = 587;  
 
 
-            $mail->setFrom('jouw-email@gmail.com', 'Jouw Naam');  
+            $mail->setFrom('info@needforcardetailing.be', 'NFCD');  
             $mail->addAddress($email);  
             $mail->Subject = 'Wachtwoord Reset Verzoek';
             $mail->Body    = 'Hallo, klik op de volgende link om je wachtwoord te resetten: ' . $reset_link;

@@ -33,7 +33,16 @@ function onderhoudsModus()
    $result = $mysqli->query($sql);
    $row = $result->fetch_assoc();
 
-   if ($row["functiewaarde"] == 1) {
+   $email = $_SESSION['email'];
+    $stmt = $mysqli->prepare("SELECT type FROM tblklant WHERE email = ?");
+    $stmt->bind_param("s", $email); // s staat voor string en stmt is de query
+    $stmt->execute(); // Voer de query uit
+    $result = $stmt->get_result();  // Haal het resultaat op
+    $row1 = $result->fetch_assoc(); 
+    $type = $row1['type'];
+
+
+   if ($row["functiewaarde"] == 1 && !($type == "admin" || $type == "eigenaar")) {
       header("Location: onderhoudsPagina");
    }
 }

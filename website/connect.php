@@ -1,5 +1,5 @@
 <?php
-$mysqli = new mysqli("localhost", "root", "", "nfcd");
+$mysqli = new mysqli("srv1650.hstgr.io", "u578783310_yassinebibi", "Zoobagogo1", "u578783310_nfcd");
 /* 
    Met de voorgaande lijn maken we een verbinding met de databank met de naam cursussql.  
    Onze server is localhost, onze gebruikersnaam root en we hebben geen paswoord ingesteld.

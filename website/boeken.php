@@ -91,19 +91,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // If time slot is available, save the appointment to the database
     if ($is_available) {
-        $insert_query = "INSERT INTO tblafspraken (email, servicenaam, datum, tijdslot, locatie) VALUES (?, ?, ?, ?, ?)";
+        $insert_query = "INSERT INTO tblafspraken (email,service_id, datum, tijdslot, locatie) VALUES (?, ?, ?, ?, ?)";
+        $sql = "SELECT service_id FROM tblservice WHERE servicenaam = ?";
+        $stmt = mysqli_prepare($mysqli, $sql);
+        mysqli_stmt_bind_param($stmt, 's', $services[$service_id - 1]['servicenaam']);
+        mysqli_stmt_execute($stmt);
+        mysqli_stmt_bind_result($stmt, $service_id);
+        mysqli_stmt_fetch($stmt);
+        mysqli_stmt_close($stmt);
         $stmt = mysqli_prepare($mysqli, $insert_query);
-        mysqli_stmt_bind_param($stmt, 'sssss', $email, $services[$service_id - 1]['servicenaam'], $datum, $tijdslot, $locatie);
+        mysqli_stmt_bind_param($stmt, 'sisss', $email, $service_id, $datum, $tijdslot, $locatie);
         mysqli_stmt_execute($stmt);
         mysqli_stmt_close($stmt);
+        $afspraak_id = $mysqli->insert_id; 
+        
 
-        echo "<p class='success'>Afspraak succesvol geboekt!</p>";
+       header("Location: email.php?afspraak_id=$afspraak_id");
     } else {
         echo "<p class='error'>Dit tijdslot is al bezet. Kies een ander tijdslot.</p>";
     }
 }
-?>
 
+?>
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -114,6 +123,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <script src="libraries/aos.js"></script>
     <link rel="stylesheet" href="boeken.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    
 
     <!-- Add custom CSS styles for success and error messages -->
     <style>
