@@ -18,6 +18,15 @@
     <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="services.css">
     <link rel="stylesheet" href="libraries/aos.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    
     
 </head>
 <body>
@@ -32,7 +41,7 @@
                     <img src="images/pakket1.png" alt="Classic Pakket 1" class="slider-image">
                     <img src="images/pakket12.png" alt="Classic Pakket 2" class="slider-image">
                 </div>
-                <h3>Classic - €30</h3>
+                <h3 id="classic">Classic - €30</h3>
                 <p data-aos="fade-up">Stofzuigen matten, vloer, zetels.</p>
                 <p data-aos="fade-up">Ruiten reinigen.</p>
                 <p data-aos="fade-up">Afstoffen.</p>
@@ -44,7 +53,9 @@
                 <p data-aos="fade-up">Matten en vloer dieptereinigen.</p>
                 <p data-aos="fade-up">Lakbescherming aanbrengen.</p>
                 </div>
-                <p data-aos="fade-up">Duur: 30 minuten.</p>
+                <div>
+                <p data-aos="fade-up"  >Duur: 30 minuten.</p>
+                </div>
             </div>
 
             <div class="service-item" data-aos="fade-up">
@@ -88,18 +99,60 @@
             <br>
         </div>
     </section>
-</main>
+
 <center><a href="boeken" class="book-button">Boek hier je afspraak.</a></center>
 
-<footer data-aos="fade-up">
-    <p>&copy; 2024 NeedForCarDetailing.</p>
-    <div class="insta">
-        <a href="https://www.instagram.com/needforcardetailing/" target="_blank">
-            <img src="images/instalog.png" alt="Instagram Logo" style="width: 30px; height: 30px;">
-        </a>
-    </div>
+
+<footer class="footer">
+<div class="container bottom_border">
+<div class="row">
+<div class=" col-sm-4 col-md col-sm-4  col-12 col">
+<h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
+<!--headin5_amrc-->
+<p class="mb10">NFCD, het bedrijf dat uw wagen nodig heeft om er zo nieuw mogelijk uit te zien. Wij behandelen met alle plezier auto's die gedeepcleaned moeten worden, auto's die er terug showroom ready moeten uitzien. Dus aarzel niet om een afspraak te boeken.</p>
+<br>
+
+<p><a href="https://www.google.com/maps/dir/51.0518685,4.5186688/Mechelsesteenweg+164,+Sint-Katelijne-Waver+2860+Sint-Katelijne-Waver,+Belgi%C3%AB/@51.0518395,4.4362685,12z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x47c3e48aecc3e83f:0xf833427cd19a530!2m2!1d4.5186688!2d51.0518685?entry=ttu&g_ep=EgoyMDI0MTExMC4wIKXMDSoASAFQAw%3D%3D"><i class="fa fa-location-arrow"></i> Mechelsesteenweg 164 2860 Sint-Katelijne-Waver </p></a>
+<p><i class="fa fa-phone"></i>  +32 499 91 21 81 </p>
+<p><i class="fa fa fa-envelope"></i> needforcardetailing@gmail.com </p>
+
+
+</div>
+
+<div class=" col-sm-4 col-md  col-6 col">
+<h5 class="headin5_amrc col_white_amrc pt2">Veel bezocht</h5>
+<!--headin5_amrc-->
+<ul class="footer_ul_amrc">
+<li><a href="services">Onze Pakketen</a></li>
+<li><a href="#car-types">Cartypes</a></li>
+<li><a href="contact#gemeentes">Welke steden?</a></li>
+<li><a href="#faq">Faq</a></li>
+</ul>
+<!--footer_ul_amrc ends here-->
+</div>
+
+<div class="container">
+<ul class="foote_bottom_ul_amrc">
+<li><a href="home">Home</a></li>
+<li><a href="over">Over NFCD</a></li>
+<li><a href="services">Services</a></li>
+<li><a href="contact">Contact</a></li>
+<li><a href="login">Login</a></li>
+<li><a href="register">Register</a></li>
+<li><a href="https://www.google.com/maps/dir/51.0518685,4.5186688/Mechelsesteenweg+164,+Sint-Katelijne-Waver+2860+Sint-Katelijne-Waver,+Belgi%C3%AB/@51.0518395,4.4362685,12z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x47c3e48aecc3e83f:0xf833427cd19a530!2m2!1d4.5186688!2d51.0518685?entry=ttu&g_ep=EgoyMDI0MTExMC4wIKXMDSoASAFQAw%3D%3D">Locatie</a></li>
+</ul>
+<!--foote_bottom_ul_amrc ends here-->
+<p class="text-center">Copyright @2024 | Designed With by NeedForCarDetailing</p>
+<ul class="social_footer_ul">
+<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+<li><a href="https://www.instagram.com/needforcardetailing/"><i class="fab fa-instagram"></i></a></li>
+</ul>
+<!--social_footer_ul ends here-->
+</div>
+
 </footer>
 
+</main>
 <script src="services.js"></script>
 <script src="libraries/aos.js"></script>
 <script>

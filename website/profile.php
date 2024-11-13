@@ -8,6 +8,14 @@
     
     <title>Profile-NFCD</title>
     <link rel="shortcut icon" href="images/prof.png" type="image/x-icon">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
 </head>
 <body>
 
@@ -20,7 +28,7 @@ include 'functies/functies.php';
 onderhoudsModus();
 
 // Controleer of de gebruiker is ingelogd
-if (!isset($_SESSION['klantnaam'])) {
+if (!isset($_SESSION['email'])) {
     header("Location: login");
     exit();
 }
@@ -31,11 +39,11 @@ if (!isset($_SESSION['updated'])) {
 }
 
 // Welkomstbericht
-echo "<h1>Mijn Gegevens</h1>";
+echo "<h3>Mijn Gegevens</h3>";
 
 // Haal de gegevens van de ingelogde gebruiker op
-$stmt = $mysqli->prepare("SELECT * FROM tblklant WHERE klantnaam = ?");
-$stmt->bind_param("s", $_SESSION['klantnaam']);
+$stmt = $mysqli->prepare("SELECT * FROM tblklant WHERE email = ?");
+$stmt->bind_param("s", $_SESSION['email']);
 $stmt->execute();
 $result = $stmt->get_result();
 $user = $result->fetch_assoc();
@@ -118,6 +126,9 @@ echo '<input type="submit" value="Log uit">';
 echo '</form>';
 ?>
 
+
+
+
 <script>
     function openNav() {
         document.getElementById("sidenav").style.width = "250px"; 
@@ -130,6 +141,7 @@ echo '</form>';
     function confirmDelete() {
         return confirm("Weet je zeker dat je je account wilt verwijderen? Dit kan niet ongedaan gemaakt worden.");
     }
+
 </script>
 </body>
 </html>

@@ -25,14 +25,14 @@ controleerAdmin($mysqli);
     <!-- Main content area -->
     <div class="main-content">
         <h1>Admin Panel</h1>
-        <p>Welkom, <?php echo $_SESSION['klantnaam']; ?>!</p>
+        <p>Welkom, op de admin pagina!</p>
 
         <div class="lijst">
             <a href="adminonderhoud" class="btn">Onderhoudsmodus</a>
             <br>
             <a href="user" class="btn">Beheer Klanten</a>
             <br>
-            <a href="afspraakAdmin" class="btn">Beheer Afspraken</a>
+            <a href="beheerafspraken" class="btn">Beheer Afspraken</a>
         </div>
     </div>
 

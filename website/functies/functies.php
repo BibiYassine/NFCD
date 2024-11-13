@@ -3,14 +3,14 @@
 
 
 function controleerAdmin($mysqli) {
-    if (!isset($_SESSION['klantnaam'])) {
+    if (!isset($_SESSION['email'])) {
         header('Location: index');
         exit();
     }   
     // Haal de type van de klant op
-    $klantnaam = $_SESSION['klantnaam'];
-    $stmt = $mysqli->prepare("SELECT type FROM tblklant WHERE klantnaam = ?");
-    $stmt->bind_param("s", $klantnaam); // s staat voor string en stmt is de query
+    $email = $_SESSION['email'];
+    $stmt = $mysqli->prepare("SELECT type FROM tblklant WHERE email = ?");
+    $stmt->bind_param("s", $email); // s staat voor string en stmt is de query
     $stmt->execute(); // Voer de query uit
     $result = $stmt->get_result();  // Haal het resultaat op
     $row = $result->fetch_assoc(); 

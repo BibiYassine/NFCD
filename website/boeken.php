@@ -5,18 +5,17 @@ include 'connect.php'; // Database connection
 include 'functies/sideMenu.php'; // Sidebar menu
 include 'functies/functies.php'; // Additional functions
 
-
 // Maintenance mode function
 onderhoudsModus();
 
 // Check if the user is logged in
-if (!isset($_SESSION['klantnaam'])) {
+if (!isset($_SESSION['email'])) {
     header("Location: login");
     exit(); // If not logged in, redirect to login page
 }
 
 // Get the logged-in user's details from tblklant using their email
-$email = $_SESSION['klantnaam'];
+$email = $_SESSION['email'];
 $query = "SELECT adres, postcode, plaats FROM tblklant WHERE email = ?";
 $stmt = mysqli_prepare($mysqli, $query);
 mysqli_stmt_bind_param($stmt, 's', $email);
@@ -24,6 +23,9 @@ mysqli_stmt_execute($stmt);
 mysqli_stmt_bind_result($stmt, $adres, $postcode, $plaats);
 mysqli_stmt_fetch($stmt);
 mysqli_stmt_close($stmt);
+
+// Determine if user's address is available
+$user_has_address = !empty($adres) && !empty($postcode) && !empty($plaats);
 
 // Fetch available services from the database
 $services = [];
@@ -33,14 +35,38 @@ while ($row = mysqli_fetch_assoc($result)) {
     $services[] = $row;
 }
 
+// Fetch available locations from tbllocatie
+$locations = [];
+$query = "SELECT locatie_id, adresnaam, adres FROM tbllocatie";
+$result = mysqli_query($mysqli, $query);
+while ($row = mysqli_fetch_assoc($result)) {
+    $locations[] = $row;
+}
+
+// Build a single string of HTML for location options
+$location_options = "<option value=''>Selecteer een locatie</option>";
+
+// Add user's profile address as a location option if it’s available
+if ($user_has_address) {
+    $user_location = "$adres, $postcode $plaats";
+    $location_options .= "<option value='$user_location'>Mijn Adres - $user_location</option>";
+} else {
+    $location_options .= "<option value='' disabled>Geen adres gelinkt aan account, vul er een in bij mijn profiel</option>";
+}
+
+// Append additional locations from the tbllocatie table
+foreach ($locations as $location) {
+    $location_options .= "<option value='{$location['adres']}'>{$location['adresnaam']} - {$location['adres']}</option>";
+}
+
 // Process the form submission
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Get form values
     $service_id = $_POST['service_id'];
     $datum = $_POST['datum'];
     $tijdslot = $_POST['tijdslot'];
-    // If user chooses custom address, save it; otherwise, use the business address
-    $locatie = $_POST['locatie'] === 'bedrijf' ? 'Bedrijfsadres' : $_POST['custom_address'];
+    // Save the selected location address directly from the form submission
+    $locatie = $_POST['locatie'];
 
     // Fetch service time duration
     $service_query = "SELECT tijd FROM tblservice WHERE service_id = ?";
@@ -124,31 +150,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <label for="tijdslot">Kies een tijdslot:</label>
             <input type="time" id="tijdslot" name="tijdslot" required>
 
-            <!-- Location selection (business or custom address) -->
+            <!-- Location selection -->
             <label for="locatie">Locatie:</label>
-            <select name="locatie" id="locatie" onchange="toggleAddressInput()" required>
-                <option value="bedrijf">Bedrijfsadres</option>
-                
+            <select name="locatie" id="locatie" required>
+                <?= $location_options ?>
             </select>
-            
 
             <button type="submit">Boek nu</button>
         </form>
     </div>
 
     <script>
-         function openNav() {
-        document.getElementById("sidenav").style.width = "250px"; 
-    }
+        function openNav() {
+            document.getElementById("sidenav").style.width = "250px"; 
+        }
 
-    function closeNav() {
-        document.getElementById("sidenav").style.width = "0"; 
-    }
-        // Toggle the visibility of the custom address input
-        function toggleAddressInput() {
-            var locatieSelect = document.getElementById("locatie");
-            var customAddress = document.getElementById("custom_address");
-            customAddress.style.display = locatieSelect.value === "custom" ? "block" : "none";
+        function closeNav() {
+            document.getElementById("sidenav").style.width = "0"; 
         }
 
         AOS.init(); // Initialize animation library

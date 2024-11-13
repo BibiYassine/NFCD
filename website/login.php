@@ -1,6 +1,7 @@
 <?php
-include 'connect.php';
 session_start();
+include 'connect.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -16,8 +17,8 @@ session_start();
     <div class="form">
         <h2>Inloggen</h2>
         <form action="login.php" method="POST">
-            <label>E-mail of klantnaam</label>
-            <input type="text" name="klantnaamofemail" required><br><br>
+            <label>E-mail</label>
+            <input type="email" name="email" required class=><br><br> <!-- Changed to email input type -->
             <label>Wachtwoord</label>
             <input type="password" name="wachtwoord" required><br>
             <p>Nog geen account? <a href="register.php">Registreer</a></p>
@@ -25,32 +26,31 @@ session_start();
             <input type="submit" value="Inloggen">
             
             <?php
-            if (isset($_POST['klantnaamofemail']) && isset($_POST['wachtwoord'])) {
-                $klantnaam = $_POST['klantnaamofemail'];
+            if (isset($_POST['email']) && isset($_POST['wachtwoord'])) {
+                $email = $_POST['email'];
                 $wachtwoord = $_POST['wachtwoord'];
 
-                // Controleren of de gebruiker bestaat
-                $stmt = $mysqli->prepare("SELECT * FROM tblklant WHERE klantnaam = ? OR email = ?");
-                $stmt->bind_param("ss", $klantnaam, $klantnaam); // Binding the parameters as strings
+                // Controleren of de gebruiker bestaat op basis van email
+                $stmt = $mysqli->prepare("SELECT * FROM tblklant WHERE email = ?");
+                $stmt->bind_param("s", $email); // Binding the email parameter as a string
                 $stmt->execute();
                 $result = $stmt->get_result();
-                $user = $result->fetch_assoc();
-                $klantnaam = $user['klantnaam'];
+                $email = $result->fetch_assoc();
 
-                if ($user && password_verify($wachtwoord, $user['wachtwoord'])) {
+                if ($email && password_verify($wachtwoord, $email['wachtwoord'])) {
                     // Wachtwoord is correct, start de sessie
-                    $_SESSION['klantnaam'] = $klantnaam; // Opslaan van de klantnaam
-                    $_SESSION['type'] = $user['type']; // Opslaan van het type gebruiker (bijv. klant of admin)
+                    $_SESSION['email'] = $email['email']; // Opslaan van de klantnaam
+                    $_SESSION['type'] = $email['type']; // Opslaan van het type gebruiker (bijv. klant of admin)
                     
                     // Controleer het type gebruiker
                     if ($user['type'] === 'admin') {
-                        header('Location: admin.php');  // Redirect naar admin pagina
+                        header('Location: admin');  // Redirect naar admin pagina
                     } else {
-                        header('Location: index.php');  // Redirect naar klantpagina
+                        header('Location: index');  // Redirect naar klantpagina
                     }
                     exit();
                 } else {
-                    echo '<div class="error">Gebruikersnaam of wachtwoord is onjuist</div>';
+                    echo '<div class="error">E-mail of wachtwoord is onjuist</div>';
                 }
             }
             ?>

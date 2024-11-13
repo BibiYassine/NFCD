@@ -42,9 +42,7 @@ label {
 }
 
 /* Input field styling */
-input[type="text"],
-input[type="password"],
-input [type= "email"] {
+input {
     width: 100%; /* Full width inputs */
     padding: 10px; /* Space inside the input */
     margin-bottom: 15px; /* Space between inputs */

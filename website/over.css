@@ -7,11 +7,15 @@ html, body {
 
 body {
     font-family: Arial, sans-serif;
-    background-color: white; /* Donkergrijze achtergrondkleur */
-    color: black; 
+    background-color: white;
+    color: black;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Zorg ervoor dat de footer altijd onderaan staat */
+    min-height: 100vh;
+}
+
+img{
+    cursor: pointer;
 }
 
 /* Sidenav (zijmenu) */
@@ -61,36 +65,33 @@ body {
 
 /* Hero sectie */
 .about-section {
-    padding: 40px 20px; /* Ruime padding voor de sectie */
+    padding: 40px 20px;
     max-width: 1200px;
-    margin: 0 auto; /* Centreer de sectie op de pagina */
-    flex: 1; /* Zorg ervoor dat de sectie groeit om ruimte in te nemen */
+    margin: 0 auto;
+    flex: 1;
 }
 
 .about-content {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px; /* Ruimte tussen afbeelding en tekst */
-    flex-direction: row; /* Standaard horizontale uitlijning */
+    gap: 20px;
+    flex-direction: row;
 }
 
 .about-image {
-    max-width: 50%; /* Zorg ervoor dat de afbeelding niet te groot wordt */
+     /* Zorg ervoor dat de afbeelding niet te groot wordt */
     height: auto;
-    border-radius: 10px; /* Ronde hoeken voor de afbeelding */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schaduw rondom de afbeelding */
-    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Voor soepele overgangseffecten */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.about-image:hover {
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.6); /* Lichter effect bij hover */
-    transform: scale(1.05); /* Vergroot de afbeelding een beetje */
-}
+
 
 /* Tekstinhoud */
 .text-content {
-    max-width: 50%; /* Zorg ervoor dat de tekst niet te breed is */
+    max-width: 50%;
     color: black;
 }
 
@@ -100,7 +101,39 @@ body {
     color: black;
 }
 
-p{
+/* Flip Container */
+.flip-container {
+    perspective: 1000px;
+    width: 600px;
+    height: 400px;
+}
+
+/* Flipper */
+.flipper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.flip-container.flipped .flipper {
+    transform: rotateY(180deg);
+}
+
+/* Front and Back Images */
+.front-image, .back-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.back-image {
+    transform: rotateY(180deg);
+}
+
+p {
     color: black;
 }
 
@@ -108,54 +141,68 @@ p{
     font-size: 1.2em;
     line-height: 1.6;
     margin-bottom: 15px;
-    color: rgb(27, 27, 27); /* Lichtere grijstint voor de paragraaftekst */
+    color: rgb(27, 27, 27);
 }
 
-/* Footer */
-footer {
-    background-color: black; /* Zwarte achtergrondkleur voor de footer */
-    text-align: center;
-    padding: 30px 0; /* Vergroot de padding verder om de footer hoger te maken */
-    font-size: 1.2em;
-    width: 100%; /* Vergroot de tekst in de footer */
-}
-
-footer p {
-    margin: 0;
-    color: #fdf8f8; /* Lichte tekstkleur */
-}
-
-/* Zorg ervoor dat de footer altijd onderaan de pagina staat */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-
-footer {
-    margin-top: auto; /* Zorg ervoor dat de footer altijd onderaan blijft */
-}
 
 /* Responsive styling */
 @media (max-width: 768px) {
-    
-
     .sidenav a {
-        font-size: 1.1em; /* Kleinere tekst voor zijmenu */
+        font-size: 1.1em;
     }
 
     .about-content {
-        flex-direction: column; /* Verander naar kolom richting op kleinere schermen */
-        text-align: center; /* Centreer de tekst in de kolom */
+        flex-direction: column;
+        text-align: center;
     }
 
-    .about-image, .text-content {
-        margin-top:  40px;
-        max-width: 100%; /* Zorg ervoor dat beide elementen niet groter zijn dan de breedte van het scherm */
+    .about-image  {
+        margin-top: 40px;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+    .text-content{
+        margin-top: 40px;
+        max-width: 100%;
+    }
+    /* Flip Container */
+.flip-container {
+    perspective: 1000px;
+    width: 350px;
+    height: 250px;
+   
+}
 
-    .menu-toggle{
+/* Flipper */
+.flipper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.flip-container.flipped .flipper {
+    transform: rotateY(180deg);
+}
+
+/* Front and Back Images */
+.front-image, .back-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.back-image {
+    transform: rotateY(180deg);
+}
+
+    .menu-toggle {
         color: black;
     }
 }
+
+

@@ -45,7 +45,7 @@ if (isset($_POST['klant_id'])) {
     <h2>Lijst van Klanten</h2>
     <ul>
     <?php
-    // Query to fetch all customers from the tblklant table, including plaats and postcode
+    // Select all customers from the database
     $query = "SELECT klant_id, klantnaam, email, telefoonnummer, adres, plaats, postcode, type FROM tblklant";
     $result = mysqli_query($mysqli, $query);
 
