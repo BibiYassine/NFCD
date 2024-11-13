@@ -23,6 +23,7 @@ include 'connect.php';
             <input type="password" name="wachtwoord" required><br>
             <p>Nog geen account? <a href="register.php">Registreer</a></p>
             <br>
+            <p>Wachtwoord vergeten? <a href="reset_password">Reset</a></p>
             <input type="submit" value="Inloggen">
             
             <?php
