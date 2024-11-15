@@ -5,9 +5,20 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f4f8; /* Light background color */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh; /* Full viewport height */
+}
+
+form p{
+    color:#263238
+}
+ form a{
+    color: red;
+}
+p{
+    color: red;
 }
 
 /* Styling the form container */

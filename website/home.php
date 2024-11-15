@@ -20,11 +20,11 @@
 </head>
 <body>
 <?php
-         include 'connect.php';
+            include 'connect.php';
             session_start();
-         //initaliseerd de klant variabele zodat er verder geen errors komen voor bezoekers die niet zijn ingelogd.
-            if(!isset($_SESSION['type'])){
-                $_SESSION['type'] = "gast";
+            //initaliseerd de klant variabele zodat er verder geen errors komen voor bezoekers die niet zijn ingelogd.
+            if(!isset($_SESSION['email'])){
+                $_SESSION['email'] = "gast";
             }
             include 'functies/sideMenu.php';
             include 'functies/functies.php';

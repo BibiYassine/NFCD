@@ -144,8 +144,7 @@ if (isset($_GET['afspraak_id'])){
             $mail->send();
             $message = 'De bevestigingsmail is verzonden.';
             $message_class = 'success';
-            sleep(3);
-            header("Location: services");
+            header("Location: success?id=true");
         } catch (Exception $e) {
             $message = "Er is iets misgegaan bij het verzenden van de e-mail. Mailer Error: {$mail->ErrorInfo}";
             $message_class = 'error';

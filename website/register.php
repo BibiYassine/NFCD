@@ -10,20 +10,25 @@ if (isset($_POST['klantnaam']) && isset($_POST['wachtwoord']) && isset($_POST['e
 
     // Controleren of de klantnaam, email of telefoonnummer al bestaat
     $stmt = $mysqli->prepare("SELECT klantnaam FROM tblklant WHERE klantnaam = ? OR email = ? OR telefoonnummer = ?");
-    if ($stmt) {
-        $stmt->bind_param("sss", $klantnaam, $email, $telefoonnummer); // Binding the parameters as strings
-        $stmt->execute();
-        $stmt->store_result(); // Store the result to check the number of rows
+     if ($stmt) {
+        $stmt->bind_param("sss", $klantnaam, $email, $telefoonnummer);// Binding the parameters 
+        $stmt->execute(); // Execute the statement
+        $stmt->store_result(); // Store the result
 
+
+        // Als de klantnaam, email of telefoonnummer al bestaat
         if ($stmt->num_rows > 0) {
-            echo "Klantnaam, email of telefoonnummer bestaat al!";
+            echo "<p>Klantnaam, email of telefoonnummer bestaat al!<p>";
         } else {
+
             // Gegevens invoegen in de database
             $stmt->close(); // Close the previous statement
-            $sql = "INSERT INTO tblklant (klantnaam, wachtwoord, email, telefoonnummer, type) VALUES (?, ?, ?, ?, ?)";
-            $stmt = $mysqli->prepare($sql);
+            $sql = "INSERT INTO tblklant (klantnaam, wachtwoord, email, telefoonnummer, type) VALUES (?, ?, ?, ?, ?)"; //geen sql injectie
+            $stmt = $mysqli->prepare($sql); // Prepare the SQL statement
+            // Als de statement correct is
             if ($stmt) {
                 $stmt->bind_param("sssss", $klantnaam, $wachtwoord, $email, $telefoonnummer, $type); // Binding the parameters
+                // Als de statement correct is uitgevoerd
                 if ($stmt->execute()) {
                     header('Location: succes');
                 } else {

@@ -33,3 +33,45 @@ a {
 a:hover {
     color: darkgrey; /* Kleur van de link bij hover */
 }
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #263238;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.3em;
+    color: #f2f2f2;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: darkgrey;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 2em;
+}
+
+.menu-toggle {
+    margin-left: 20px;
+    font-size: 45px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #263238;
+}

@@ -21,8 +21,8 @@ include 'connect.php';
             <input type="email" name="email" required class=><br><br> <!-- Changed to email input type -->
             <label>Wachtwoord</label>
             <input type="password" name="wachtwoord" required><br>
-            <p>Nog geen account? <a href="register.php">Registreer</a></p>
-            <p>Wachtwoord vergeten? <a href="reset_password">Reset</a></p>
+            <p>Nog geen account? <a href="register.php">Maak hier één</a></p>
+            <p>Wachtwoord vergeten? <a href="reset_password">Reset hier</a></p>
             <input type="submit" value="Inloggen">
             
             <?php
@@ -32,10 +32,10 @@ include 'connect.php';
 
                 // Controleren of de gebruiker bestaat op basis van email
                 $stmt = $mysqli->prepare("SELECT * FROM tblklant WHERE email = ?");
-                $stmt->bind_param("s", $email); // Binding the email parameter as a string
-                $stmt->execute();
-                $result = $stmt->get_result();
-                $email = $result->fetch_assoc();
+                $stmt->bind_param("s", $email);// s staat voor string
+                $stmt->execute(); // Voer de query uit
+                $result = $stmt->get_result(); // Krijg het resultaat van de query
+                $email = $result->fetch_assoc(); // Zet het resultaat om in een array
 
                 if ($email && password_verify($wachtwoord, $email['wachtwoord'])) {
                     // Wachtwoord is correct, start de sessie

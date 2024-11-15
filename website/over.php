@@ -43,7 +43,6 @@
             </div>
         </div>
     </section>
-    </main>
     <footer class="footer">
 <div class="container bottom_border">
 <div class="row">
@@ -89,6 +88,8 @@
 </div>
 
 </footer>
+
+    </main>
 
 
 

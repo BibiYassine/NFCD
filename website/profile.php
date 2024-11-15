@@ -39,7 +39,7 @@ if (!isset($_SESSION['updated'])) {
 }
 
 // Welkomstbericht
-echo "<h3>Mijn Gegevens</h3>";
+echo "<h4>Mijn Gegevens</h4>";
 
 // Haal de gegevens van de ingelogde gebruiker op
 $stmt = $mysqli->prepare("SELECT * FROM tblklant WHERE email = ?");
