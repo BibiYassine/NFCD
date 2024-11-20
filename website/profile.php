@@ -99,7 +99,7 @@ echo '<label for="email">Email:</label>';
 echo '<input type="text" id="email" name="email" value="' . htmlspecialchars($user['email']) . '" placeholder="Voer uw email in" required><br>';
 
 echo '<label for="adres">Adres:</label>';
-echo '<input type="text" id="adres" name="adres" value="' . htmlspecialchars($user['adres']) . '" placeholder="Voer uw adres in" required><br>';
+echo '<input type="text" id="adres" name="adres" value="' . htmlspecialchars($user['adres']) . '" placeholder="Voer uw adres in" required><br>'; //htmlspecialchars zorgt ervoor dat de gebruiker geen html code kan invoeren
 
 echo '<label for="postcode">Postcode:</label>';
 echo '<input type="text" id="postcode" name="postcode" value="' . htmlspecialchars($user['postcode']) . '" placeholder="Voer uw postcode in" required><br>';
