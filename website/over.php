@@ -93,7 +93,11 @@
 
 
 
-
+<script>
+    window.onload = function() {
+        document.querySelector('.sidenav').style.width = '250px'; // Stel de gewenste breedte in
+    };
+</script>
 <script src="libraries/aos.js"></script>
 <script src="over.js"></script>
 

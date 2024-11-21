@@ -146,6 +146,9 @@
 
     <script src="libraries/aos.js"></script>
     <script>
+        window.onload = function() {
+        document.querySelector('.sidenav').style.width = '250px'; // Stel de gewenste breedte in
+    };
         function openNav() {
             document.getElementById("sidenav").style.width = "250px"; // Open de sidenav
         }
