@@ -59,7 +59,7 @@ p {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 2000;
     top: 0;
     left: 0;
     background-color: #263238;
@@ -91,16 +91,42 @@ p {
 
 /* Hamburger menu */
 .menu-toggle {
-    font-size: 45px;
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    color: #263238;
+    margin-left: 15px;
+        font-size: 45px;
+        cursor: pointer;
+        position: fixed; /* Change to fixed position */
+        top: 10px;
+        left: 15px;
+        color: white;
+        z-index: 1000; /* Ensure it is above other elements */
+        background-color: #263238;
+        border-radius: 50px; /* Make the background a circle */
+        width: 60px;
+        height: 60px; /* Ensure width and height are equal */
+        display: flex;
+        align-items: center;
+        justify-content: center;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    .menu-toggle {
+        margin-left: 15px;
+            font-size: 45px;
+            cursor: pointer;
+            position: fixed; /* Change to fixed position */
+            top: 10px;
+            left: 15px;
+            color: white;
+            z-index: 1000; /* Ensure it is above other elements */
+            background-color: #263238;
+            border-radius: 50px; /* Make the background a circle */
+            width: 60px;
+            height: 60px; /* Ensure width and height are equal */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    }
     .main-content {
         width: 90%;
     }
@@ -114,6 +140,6 @@ p {
     }
 
     .lijst a.btn {
-        width: 150px;
+        width: 250px;
     }
 }

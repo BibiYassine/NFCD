@@ -115,10 +115,11 @@ if (isset($_GET['afspraak_id'])){
     <div class="email-container">
         <div class="email-header">
             <h1>Bevestiging van uw Afspraak</h1>
+            <p>Deze email is een no-reply email, alles wat hiernaar wordt doorgestuurd wordt niet bekeken. Voor uw vragen --> needforcardetailing@gmail.com.</p>
         </div>
         <div class="email-body">
             <p>Beste ' . $klantnaam . ',</p>
-            <p>Bedankt voor het maken van een afspraak bij Need for Car Detailing. Hier zijn de details van uw afspraak:</p>
+            <p>Bedankt voor het maken van een afspraak bij NeedForCarDetailing. Hier zijn de details van uw afspraak:</p>
             
             <div class="details">
                 <p><span class="bold">Naam:</span> ' . $klantnaam . '</p>
@@ -130,11 +131,11 @@ if (isset($_GET['afspraak_id'])){
                 <p><span class="bold">Prijs:</span> 	&euro;' . $prijs . '</p>
             </div>
 
-            <p>Als u vragen heeft of de afspraak wilt wijzigen, neem dan gerust contact met ons op via info@needforcardetailing.be of +32 123 456 789.</p>
+            <p>Als u vragen heeft of de afspraak wilt wijzigen, neem dan gerust contact met ons op via needforcardetailing@gmail.com of +32 499 91 21 81.</p>
         </div>
         <div class="email-footer">
             <p>&copy; 2024 Need for Car Detailing. Alle rechten voorbehouden.</p>
-            <p>Adres Bedrijf | +32 499 91 21 81 | info@needforcardetailing.be</p>
+            <p>Adres Bedrijf | +32 499 91 21 81 | needforcardetailing@gmail.com</p>
         </div>
     </div>
 </body>

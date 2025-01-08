@@ -10,7 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel-NFCD</title>
+    <title>Admin Panel- NFCD</title>
     <link rel="stylesheet" href="admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for icons -->
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
@@ -78,15 +78,15 @@ controleerAdmin($mysqli);
     </div>
 
     <script>
-    function openNav() {
-        document.getElementById("sidenav").style.width = "250px"; // Open de sidenav
-    }
+     function openNav() {
+            document.getElementById("sidenav").style.width = "250px"; 
+        }
 
-    function closeNav() {
-        document.getElementById("sidenav").style.width = "0"; // Sluit de sidenav
-    }
+        function closeNav() {
+            document.getElementById("sidenav").style.width = "0"; 
+        }
 
-    AOS.init();
+        AOS.init(); // Initialize animation library
 </script>
 </body>
 </html>

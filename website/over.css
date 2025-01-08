@@ -24,7 +24,7 @@ img {
     height: 100%;
     width: 0; /* Start breedte op 0 zodat het niet zichtbaar is */
     position: fixed;
-    z-index: 1;
+    z-index: 2000;
     top: 0;
     left: 0;
     background-color: #263238;
@@ -37,7 +37,7 @@ img {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 1.3em;
-    color: #f2f2f2;
+    color: white;
     display: block;
     transition: 0.3s;
 }
@@ -55,13 +55,21 @@ img {
 
 /* Hamburger menu */
 .menu-toggle {
-    display: block;
-    font-size: 50px;
+    margin-left: 15px;
+    font-size: 45px;
     cursor: pointer;
-    position: absolute;
+    position: fixed; /* Change to fixed position */
     top: 10px;
-    left: 10px;
-    color: #263238;
+    left: 15px;
+    color: white;
+    z-index: 1000; /* Ensure it is above other elements */
+    background-color: #263238;
+    border-radius: 50px; /* Make the background a circle */
+    width: 60px;
+    height: 60px; /* Ensure width and height are equal */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Hero sectie */
@@ -269,9 +277,7 @@ footer p {
 
 /* Responsive styling */
 @media (max-width: 768px) {
-    .sidenav a {
-        font-size: 1.1em;
-    }
+ 
 
     .about-content {
         flex-direction: column;
@@ -324,6 +330,20 @@ footer p {
     }
 
     .menu-toggle {
-        color: black;
+        margin-left: 15px;
+        font-size: 45px;
+        cursor: pointer;
+        position: fixed; /* Change to fixed position */
+        top: 10px;
+        left: 15px;
+        color: white;
+        z-index: 1000; /* Ensure it is above other elements */
+        background-color: #263238;
+        border-radius: 50px; /* Make the background a circle */
+        width: 60px;
+        height: 60px; /* Ensure width and height are equal */
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }

@@ -147,6 +147,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
 
     <div class="booking-container">
+        <p>Je moet eerst inloggen om een afspraak te boeken anders werkt het niet. Dus log eerst in als je nog niet bent ingelogd.</p>
         <h2>Boek een afspraak</h2>
         <form method="post" action="boeken.php">
             <!-- Choose service dropdown -->

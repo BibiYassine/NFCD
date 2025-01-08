@@ -1,26 +1,22 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const sliders = document.querySelectorAll('.slider');
-    
-    sliders.forEach(slider => {
-        const images = slider.querySelectorAll('.slider-image');
-        let currentIndex = 0;
-        
-        function showNextImage() {
-            images[currentIndex].style.opacity = 0;
-            currentIndex = (currentIndex + 1) % images.length;
-            images[currentIndex].style.opacity = 1;
+document.addEventListener("DOMContentLoaded", () => {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const closeBtn = document.querySelector(".lightbox .close");
+
+    document.querySelectorAll(".gallery-item").forEach(item => {
+        item.addEventListener("click", () => {
+            lightbox.style.display = "flex";
+            lightboxImg.src = item.src;
+        });
+    });
+
+    closeBtn.addEventListener("click", () => {
+        lightbox.style.display = "none";
+    });
+
+    lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) {
+            lightbox.style.display = "none";
         }
-        
-        setInterval(showNextImage, 3000); // Verander afbeelding elke 3 seconden
     });
 });
-// services.js
-document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.getElementById('menu-toggle');
-    const navbar = document.getElementById('navbar');
-
-    menuToggle.addEventListener('click', function() {
-        navbar.classList.toggle('active');
-    });
-});
-

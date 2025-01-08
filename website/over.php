@@ -43,6 +43,8 @@
             </div>
         </div>
     </section>
+    </main>
+
     <footer class="footer">
 <div class="container bottom_border">
 <div class="row">
@@ -81,7 +83,6 @@
 <!--foote_bottom_ul_amrc ends here-->
 <p class="text-center">Copyright @2024 | Designed With by NeedForCarDetailing</p>
 <ul class="social_footer_ul">
-<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
 <li><a href="https://www.instagram.com/needforcardetailing/"><i class="fab fa-instagram"></i></a></li>
 </ul>
 <!--social_footer_ul ends here-->
@@ -89,16 +90,21 @@
 
 </footer>
 
-    </main>
+    
 
 
-
-<script>
-    window.onload = function() {
-        document.querySelector('.sidenav').style.width = '250px'; // Stel de gewenste breedte in
-    };
-</script>
 <script src="libraries/aos.js"></script>
+<script>
+         function openNav() {
+            document.getElementById("sidenav").style.width = "250px"; 
+        }
+
+        function closeNav() {
+            document.getElementById("sidenav").style.width = "0"; 
+        }
+
+        AOS.init(); // Initialize animation library
+    </script>
 <script src="over.js"></script>
 
 </body>

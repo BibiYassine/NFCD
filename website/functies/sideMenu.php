@@ -10,9 +10,9 @@ echo '<div class="sidenav" id="sidenav">
         }else{
             $sql = "SELECT type FROM tblklant where email = ?";
             $stmt = $mysqli->prepare($sql);
-            $stmt->bind_param("s", $_SESSION['email']); // s staat voor string en is de waarde die je meegeeft
-            $stmt->execute(); // voer de query uit
-            $result = $stmt->get_result(); // krijg het resultaat van de query
+            $stmt->bind_param("s", $_SESSION['email']);
+            $stmt->execute();
+            $result = $stmt->get_result();
             $row = $result->fetch_assoc();
             if($row['type'] == "admin" || $row['type'] == "eigenaar"){
                 echo '<a href="admin">AdminPanel</a>';

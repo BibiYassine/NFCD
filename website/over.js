@@ -1,14 +1,12 @@
-// JavaScript for hamburger menu
 function openNav() {
-    document.getElementById("sidenav").style.width = "250px"; // Set width for side menu
+    document.getElementById("sidenav").style.width = "250px"; 
 }
 
 function closeNav() {
-    document.getElementById("sidenav").style.width = "0"; // Reset width to hide side menu
+    document.getElementById("sidenav").style.width = "0"; 
 }
 
-// Initialize AOS (Animate On Scroll Library)
-AOS.init();
+AOS.init(); // Initialize animation library
 
 // Function to flip the image on click
 function flipImage() {

@@ -15,7 +15,7 @@ html, body {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 2000;
     top: 0;
     left: 0;
     background-color: #263238;
@@ -46,13 +46,21 @@ html, body {
 
 /* Hamburger menu */
 .menu-toggle {
-    margin-left: 20px;
+    margin-left: 15px;
     font-size: 45px;
     cursor: pointer;
-    position: absolute;
+    position: fixed; /* Change to fixed position */
     top: 10px;
-    left: 10px;
-    color: black;
+    left: 15px;
+    color: white;
+    z-index: 1000; /* Ensure it is above other elements */
+    background-color: #263238;
+    border-radius: 50px; /* Make the background a circle */
+    width: 60px;
+    height: 60px; /* Ensure width and height are equal */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Hoofdsectie */
@@ -61,31 +69,22 @@ main {
     width: 100%;
 }
 
-.gemeentes {
-    margin-top: 20px;
-    padding: 20px;
-    border: 2px solid #000; /* Kader rond de gemeentes sectie */
-    border-radius: 10px; /* Afgeronde hoeken */
-    background-color: #f9f9f9; /* Achtergrondkleur voor de sectie */
+.kaartje {
+    display: flex;
+    flex-direction: row;
+   
+    gap: 10px; /* Optional: adds space between images */
 }
 
-.gemeente-list {
-    list-style-type: none; /* Verwijder standaard opsommingstekens */
-    padding: 0; /* Verwijder standaard padding */
+.kaartje img {
+    width: 50%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: #263238 0px 0px 10px;
 }
 
-.gemeente-list li {
-    padding: 10px; /* Ruimte rond elke gemeente */
-    border-bottom: 1px solid #ccc; /* Onderscheidende lijn tussen gemeentes */
-}
-
-.gemeente-list li:last-child {
-    border-bottom: none; /* Verwijder de lijn van de laatste gemeente */
-}
-
-.gemeente-list li:hover {
-    background-color: #e0e0e0; /* Hover effect */
-    transition: background-color 0.3s; /* Zachte overgang */
+.kaartje img:hover {
+    box-shadow: #263238 0px 0px 20px;
 }
 
 
@@ -172,7 +171,7 @@ footer p { font-size:13px; color:#CCC; padding-bottom:0px; margin-bottom:8px;}
 }
 
 .contact-form button {
-    background-color: black;
+    background-color: #263238;
     color: white;
     padding: 10px;
     border: none;
@@ -186,14 +185,42 @@ footer p { font-size:13px; color:#CCC; padding-bottom:0px; margin-bottom:8px;}
 
 /* Responsive styling */
 @media (max-width: 768px) {
+    .kaartje {
+        display: flex;
+        flex-direction: column;
+       
+        gap: 10px; /* Optional: adds space between images */
+    }
+    .kaartje img{
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        box-shadow: #263238 0px 0px 10px;
+    }
+    .kaartje img:hover{
+    
+        box-shadow: #263238 0px 0px 20px;
+    }
     .sidenav {
         width: 0; /* Begin met een gesloten sidenav */
     }
 
     .menu-toggle {
-        display: block;
-        color: black; /* Hamburger kleur */
-        size: 10px;
+        margin-left: 15px;
+        font-size: 45px;
+        cursor: pointer;
+        position: fixed; /* Change to fixed position */
+        top: 10px;
+        left: 15px;
+        color: white;
+        z-index: 1000; /* Ensure it is above other elements */
+        background-color: #263238;
+        border-radius: 50px; /* Make the background a circle */
+        width: 60px;
+        height: 60px; /* Ensure width and height are equal */
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .contact-section {

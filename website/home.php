@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home-NFCD</title>
+    <title>NFCD</title>
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">    
     <link rel="stylesheet" href="libraries/aos.css">
@@ -31,14 +30,13 @@
             onderhoudsModus();
       ?>
 
-
+<span class="menu-toggle" onclick="openNav()">&#9776;</span>
 
     
     <main>
-    
         <section id="home" class="hero">
             <h1>Welkom op de officiële website van NFCD</h1>
-            <p>Needforcardetailing, Het detail bedrijf dat uw wagen nodig heeft.</p>
+            <p>NeedForCarDetailing, Het detail bedrijf dat uw wagen nodig heeft.</p>
             <a href="over.php" class="btn">Lees hier meer</a>
         </section>
     
@@ -50,18 +48,18 @@
             <div class="faq-container">
                 <div class="faq-item" data-aos="fade-up">
                     <img src="images/faq1.png" alt="Icon 1">
-                    <h3>Waarom detailen en geen carwash?</h3>
-                    <p>Detailen heeft tal van voordelen. Geen was krassen, tot in de kleinste details gereinigd, je auto naar een showroom staat en dat allemaal aangevuld met interieur en lak bescherming.</p>
+                    <h3>Waarom kiezen voor een detailing?</h3>
+                    <p>Detailen heeft veel pluspunten. Je auto nieuw laten lijken/showroom nieuw laten lijken van binnen, geen krassen bij het wassen van het exterieur. Het wordt met tijd en liefde verzorgd zodat het eindresultaat zo goed mogelijk is.</p>
                 </div>
                 <div class="faq-item" data-aos="fade-up">
                     <img src="images/faq2.png" alt="Icon 2">
-                    <h3>Hoe lang duurt een beurt?</h3>
-                    <p>Dit is variërend van het gekozen pakket, een basis buiten/binnen reiniging duurt gemiddeld 3 werkuren om een idee te geven.</p>
+                    <h3>Wat is de duur van een detailbeurt</h3>
+                    <p> Een standaard reiniging duurt ongeveer 2 à 3 uurtjes. Maar dit hangt er vanaf van de service die je wenst.</p>
                 </div>
                 <div class="faq-item" data-aos="fade-up">
                     <img src="images/faq3.png" alt="Icon 3">
-                    <h3>Hoe vaak een detailing beurt?</h3>
-                    <p>Wij raden aan om 1-2x per jaar een dieptereiniging van het interieur te laten doen. Een handwas of een basis binnen/buiten reiniging is elke maand nodig!</p>
+                    <h3>Hoe vaak een detail beurt?</h3>
+                    <p>We vinden zelf dat je rond de 2 keer per jaar je wagen zou moeten detailen. Een carwash is zeker aangeraden om de 2 à 3 weken.</p>
                 </div>
             </div>
         </section>
@@ -83,12 +81,12 @@
                     <p data-aos="fade-up">Een grondige reiniging van uw voertuig, van binnen en buiten.</p>
                 </div>
                 <div class="service-item" data-aos="fade-up">
-                    <img src="images/leder.png" alt="Leder Cleaning">
+                    <img src="images/refresh.png" alt="Leder Cleaning">
                     <h3 data-aos="fade-up">Leder Cleaning</h3>
                     <p data-aos="fade-up">Professionele reiniging en onderhoud van lederen bekleding.</p>
                 </div>
                 <div class="service-item" data-aos="fade-up">
-                    <img src="images/pakket12.png" alt="Interieur Reiniging">
+                    <img src="images/aklasse.png" alt="Interieur Reiniging">
                     <h3 data-aos="fade-up">Interieur Reiniging</h3>
                     <p data-aos="fade-up" >Grondige reiniging van het interieur van uw auto.</p>
                 </div>
@@ -100,11 +98,11 @@
             <p data-aos="fade-up">Wij bieden detailing aan voor verschillende soorten auto's:</p>
             <div class="car-types-container">
                 <div class="car-type-item" data-aos="fade-up">
-                    <img src="images/oldtimer.png" alt="Oldtimer">
+                    <img src="images/190Dbuiten.png" alt="Oldtimer">
                     <h3 data-aos="fade-up">Oldtimers</h3>
                 </div>
                 <div class="car-type-item" data-aos="fade-up">
-                    <img src="images/normale.png" alt="Normale Auto">
+                    <img src="images/c220.png" alt="Normale Auto">
                     <h3 data-aos="fade-up">Normale Auto's/SUV</h3>
                 </div>
                 <div class="car-type-item" data-aos="fade-up">
@@ -154,7 +152,7 @@
 <!--foote_bottom_ul_amrc ends here-->
 <p class="text-center">Copyright @2024 | Designed With by NeedForCarDetailing</p>
 <ul class="social_footer_ul">
-<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+
 <li><a href="https://www.instagram.com/needforcardetailing/"><i class="fab fa-instagram"></i></a></li>
 </ul>
 <!--social_footer_ul ends here-->
@@ -163,23 +161,18 @@
 </footer>
 
     </main>
-            
- 
-
     <script src="libraries/aos.js"></script>
     <script>
-        window.onload = function() {
-        document.querySelector('.sidenav').style.width = '250px'; // Stel de gewenste breedte in
-    };
-        function openNav() {
-            document.getElementById("sidenav").style.width = "250px"; // Open de sidenav
+    
+    function openNav() {
+            document.getElementById("sidenav").style.width = "250px"; 
         }
 
         function closeNav() {
-            document.getElementById("sidenav").style.width = "0"; // Sluit de sidenav
+            document.getElementById("sidenav").style.width = "0"; 
         }
 
-        AOS.init();
+        AOS.init(); // Initialize animation library
     </script>
 </body>
 </html>

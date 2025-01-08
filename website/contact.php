@@ -47,41 +47,19 @@
             </iframe>
             
             </div>
-
-            <div class="gemeentes" data-aos="fade-up" id="gemeentes">
-                <h3 data-aos="fade-up">Afstand</h3>
-                <ul class="gemeente-list">
-                    <li data-aos="fade-up">Sint-Katelijne-Waver</li>
-                    <li data-aos="fade-up">Bonheiden</li>
-                    <li data-aos="fade-up">Keerbergen</li>
-                    <li data-aos="fade-up">Rijmenam</li>
-                    <li data-aos="fade-up">Puurs</li>
-                    <li data-aos="fade-up">Bornem</li>
-                    <li data-aos="fade-up">Willebroek</li>
-                    <li data-aos="fade-up">Walem</li>
-                    <li data-aos="fade-up">Duffel</li>
-                    <li data-aos="fade-up">Zemst</li>
-                    <li data-aos="fade-up">Elewijt</li>
-                    <li data-aos="fade-up">Hombeek</li>
-                    <li data-aos="fade-up">Heffen</li>
-                    <li data-aos="fade-up">Leest</li>
-                    <li data-aos="fade-up">Muizen</li>
-                    <li data-aos="fade-up">Hofstade</li>
-                    <li data-aos="fade-up">Wij doen onze services op onze eigen locatie of de locatie die het best past voor u.</li>
-                </ul>
-            </div>
-
+            <div class= "kaartje">
+            <img src="images/voorkant2.png" alt="contact" class="contact-img" data-aos="fade-up">
+            <br>
+            <br>
+            <img src="images/achterkant2.png" alt="contact" class="contact-img" data-aos="fade-up">
+        </div>
             <div class="contact-form" data-aos="fade-up">
                 <h2 data-aos="fade-up">Stuur ons een bericht</h2>
                 <form action="mailto:needforcardetailing@gmail.com" method="post" enctype="text/plain">
                     <label for="name" data-aos="fade-up">Naam:</label>
-                    <input type="text" id="name" name="name" required>
-
-                    <label for="email" data-aos="fade-up">Email:</label>
-                    <input type="email" id="email" name="email" required>
-
+                    <input type="text" id="name" name="" required>
                     <label for="message" data-aos="fade-up">Bericht:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <textarea id="message" name="message" rows="5" required placeholder="Vul hier uw vraag in, een afspraak boeken, etc."></textarea>
 
                     <button type="submit" data-aos="fade-up">Verstuur</button>
                 </form>
@@ -129,7 +107,6 @@
 <!--foote_bottom_ul_amrc ends here-->
 <p class="text-center">Copyright @2024 | Designed With by NeedForCarDetailing</p>
 <ul class="social_footer_ul">
-<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
 <li><a href="https://www.instagram.com/needforcardetailing/"><i class="fab fa-instagram"></i></a></li>
 </ul>
 <!--social_footer_ul ends here-->
@@ -146,17 +123,16 @@
 
     <script src="libraries/aos.js"></script>
     <script>
-        window.onload = function() {
-        document.querySelector('.sidenav').style.width = '250px'; // Stel de gewenste breedte in
-    };
-        function openNav() {
-            document.getElementById("sidenav").style.width = "250px"; // Open de sidenav
+    
+    function openNav() {
+            document.getElementById("sidenav").style.width = "250px"; 
         }
 
         function closeNav() {
-            document.getElementById("sidenav").style.width = "0"; // Sluit de sidenav
+            document.getElementById("sidenav").style.width = "0"; 
         }
-        AOS.init(); // Initialiseer AOS
+
+        AOS.init(); // Initialize animation library
     </script>
 </body>
 </html>

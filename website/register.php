@@ -6,14 +6,14 @@ if (isset($_POST['klantnaam']) && isset($_POST['wachtwoord']) && isset($_POST['e
     $wachtwoord = password_hash($_POST['wachtwoord'], PASSWORD_DEFAULT); // Wachtwoord hashen
     $email = $_POST['email'];
     $telefoonnummer = $_POST['telefoonnummer'];
-    $type = 'klant'; // Standaard type gebruiker (kan aangepast worden naar admin indien gewenst)
+    $type = 'klant';
 
     // Controleren of de klantnaam, email of telefoonnummer al bestaat
     $stmt = $mysqli->prepare("SELECT klantnaam FROM tblklant WHERE klantnaam = ? OR email = ? OR telefoonnummer = ?");
      if ($stmt) {
-        $stmt->bind_param("sss", $klantnaam, $email, $telefoonnummer);// Binding the parameters 
-        $stmt->execute(); // Execute the statement
-        $stmt->store_result(); // Store the result
+        $stmt->bind_param("sss", $klantnaam, $email, $telefoonnummer); //paramaters binden
+        $stmt->execute();  // voer de query uit
+        $stmt->store_result(); // sla de resultaten op 
 
 
         // Als de klantnaam, email of telefoonnummer al bestaat
@@ -23,8 +23,9 @@ if (isset($_POST['klantnaam']) && isset($_POST['wachtwoord']) && isset($_POST['e
 
             // Gegevens invoegen in de database
             $stmt->close(); // Close the previous statement
-            $sql = "INSERT INTO tblklant (klantnaam, wachtwoord, email, telefoonnummer, type) VALUES (?, ?, ?, ?, ?)"; //geen sql injectie
+            $sql = "INSERT INTO tblklant (klantnaam, wachtwoord, email, telefoonnummer, type) VALUES (?, ?, ?, ?, ?)"; // ??? staat voor parameters 
             $stmt = $mysqli->prepare($sql); // Prepare the SQL statement
+
             // Als de statement correct is
             if ($stmt) {
                 $stmt->bind_param("sssss", $klantnaam, $wachtwoord, $email, $telefoonnummer, $type); // Binding the parameters
@@ -34,7 +35,7 @@ if (isset($_POST['klantnaam']) && isset($_POST['wachtwoord']) && isset($_POST['e
                 } else {
                     echo "Er ging iets fout bij de registratie.";
                 }
-                $stmt->close(); // Close the statement after usage
+                $stmt->close(); // sluit de statement
             } else {
                 echo "Er ging iets fout bij het voorbereiden van de registratie.";
             }

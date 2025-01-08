@@ -8,7 +8,6 @@
     include 'functies/functies.php';
     onderhoudsModus();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,80 +29,74 @@
     
 </head>
 <body>
-
 <main>
-    <section class="services-section">
+    <section class="services-section" >
         <h2 data-aos="fade-up">Onze Pakketten</h2>
 
+        <!-- classic -->
         <div class="services-container" data-aos="fade-up">
             <div class="service-item" data-aos="fade-up">
                 <div class="slider">
-                    <img src="images/pakket1.png" alt="Classic Pakket 1" class="slider-image">
-                    <img src="images/pakket12.png" alt="Classic Pakket 2" class="slider-image">
+                    <img src="images/after1.png" alt="Classic Pakket 1" class="slider-image" data aos="fade-up">
+                    <img src="images/before1.png" alt="Classic Pakket 2" class="slider-image" data aos="fade-up">
                 </div>
-                <h3 id="classic">Classic - €30</h3>
-                <p data-aos="fade-up">Stofzuigen matten, vloer, zetels.</p>
-                <p data-aos="fade-up">Ruiten reinigen.</p>
-                <p data-aos="fade-up">Afstoffen.</p>
-                <p data-aos="fade-up">Dashboard, deurpanelen en stuur behandelen met stoomreiniger.</p>
-                <p data-aos="fade-up">Buitenkant wassen.</p>
-                <p data-aos="fade-up">Motorruimte reinigen.</p>
-                <div class="niet">
-                <p data-aos="fade-up">Stoelen dieptereinigen.</p>
-                <p data-aos="fade-up">Matten en vloer dieptereinigen.</p>
-                <p data-aos="fade-up">Lakbescherming aanbrengen.</p>
+                <br>
+                <div class="slider">
+                    <img src="images/after2.png" alt="Classic Pakket 1" class="slider-image" data aos="fade-up">
+                    <img src="images/before2.png" alt="Classic Pakket 2" class="slider-image" data aos="fade-up">
+
                 </div>
-                <div>
-                <p data-aos="fade-up"  >Duur: 30 minuten.</p>
-                </div>
+                <br>
+                <h3 id="classic" data aos="fade-up">Classic - €30</h3>
+               
+               
             </div>
+<!-- Refresh -->
 
             <div class="service-item" data-aos="fade-up">
                 <div class="slider">
-                    <img src="images/alcantara.png" alt="Refresh Pakket 1" class="slider-image">
-                    <img src="images/refresh.png" alt="Refresh Pakket 2" class="slider-image">
+                    <img src="images/polo.png" alt="Refresh Pakket 1" class="slider-image" data aos="fade-up">
+                    <img src="images/polo1.png" alt="Refresh Pakket 2" class="slider-image" data aos="fade-up">
+                </div>
+                <br>
+                <div class="slider">
+                    <img src="images/aklasse.png" alt="Refresh Pakket 1" class="slider-image" data aos="fade-up">
+                    <img src="images/alcantara.png" alt="Refresh Pakket 2" class="slider-image" data aos="fade-up">
                 </div>
                 <h3 data-aos="fade-up">Refresh - €80</h3>
-                <p data-aos="fade-up">Dieptereinigen van stoelen, matten, vloer.</p>
-                <p data-aos="fade-up">Lederen en alcantara stoelen reinigen</p>
-                <p data-aos="fade-up">Ruiten reinigen.</p>
-                <p data-aos="fade-up">Afstoffen.</p>
-                <p data-aos="fade-up">Dashboard, deurpanelen en stuur reinigen en met stoomreiniger behandelen.</p>
-                <div class="niet">
-                <p data-aos="fade-up">Buitenkant wassen.</p>
-                <p data-aos="fade-up">Wielen en velgen behandelen.</p>
-                <p data-aos="fade-up">Motorruimte reinigen.</p>
-                <p data-aos="fade-up">Lakbescherming aanbrengen.</p>
-                </div>
-                <p data-aos="fade-up">Duur: 3 uur.</p>
+                
             </div>
+
+
+<!-- Diamond -->
 
             <div class="service-item" data-aos="fade-up">
                 <div class="slider">
-                    <img src="images/refresh.png" alt="Diamond Pakket 1" class="slider-image">
-                    <img src="images/ext.png" alt="Diamond Pakket 2" class="slider-image">
+                    <img src="images/refresh.png" alt="Diamond Pakket 1" class="slider-image" data aos="fade-up">
+                    <img src="images/ext.png" alt="Diamond Pakket 2" class="slider-image" data aos="fade-up">
+                </div>
+                <br>
+                <div class="slider">
+                    <img src="images/afterja.png" alt="Diamond Pakket 1" class="slider-image" data aos="fade-up">
+                    <img src="images/beforeja.png" alt="Diamond Pakket 2" class="slider-image" data aos="fade-up">
                 </div>
                 <h3 data-aos="fade-up">Diamond - €130</h3>
-                <p data-aos="fade-up">Dieptereinigen van stoelen, matten, vloer.</p>
-                <p data-aos="fade-up">Lederen en alcantara stoelen reinigen</p>
-                <p data-aos="fade-up">Ruiten reinigen.</p>
-                <p data-aos="fade-up">Afstoffen.</p>
-                <p data-aos="fade-up">Dashboard, deurpanelen en stuur reinigen en met stoomreiniger behandelen.</p>
-                <p data-aos="fade-up">Buitenkant wassen.</p>
-                <p data-aos="fade-up">Wielen en velgen behandelen.</p>
-                <p data-aos="fade-up">Motorruimte reinigen.</p>
-                <p data-aos="fade-up">Lakbescherming aanbrengen.</p>
-                
-                <p data-aos="fade-up">Duur: 6 uur.</p>
             </div>
             <br>
         </div>
+        <br>
+        <div class="prijzen" data aos="fade-up">
+        <h2>Hieronder vindt u een overzicht van onze diensten:</h2 data aos="fade-up">
+        <br>
+        <img src="images/prijzen.png" alt="contact" class="contact-img" data-aos="fade-up">
+        </div>
     </section>
 
-<center><a href="boeken" class="book-button">Boek hier je afspraak.</a></center>
+
+<center><a href="boeken" class="book-button" data aos="fade-up">Boek hier je afspraak.</a></center>
 
 
-<footer class="footer">
+<footer class="footer" data aos="fade-up">
 <div class="container bottom_border">
 <div class="row">
 <div class=" col-sm-4 col-md col-sm-4  col-12 col">
@@ -141,7 +134,7 @@
 <!--foote_bottom_ul_amrc ends here-->
 <p class="text-center">Copyright @2024 | Designed With by NeedForCarDetailing</p>
 <ul class="social_footer_ul">
-<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+
 <li><a href="https://www.instagram.com/needforcardetailing/"><i class="fab fa-instagram"></i></a></li>
 </ul>
 <!--social_footer_ul ends here-->
@@ -153,32 +146,15 @@
 <script src="services.js"></script>
 <script src="libraries/aos.js"></script>
 <script>
-    AOS.init();
-    window.onload = function() {
-        document.querySelector('.sidenav').style.width = '250px'; // Stel de gewenste breedte in
-    };
-    function closeNav() {
-        document.getElementById("sidenav").style.width = "0";
-    }
-    function openNav() {
-        document.getElementById("sidenav").style.width = "250px";
-    }
+     function openNav() {
+            document.getElementById("sidenav").style.width = "250px"; 
+        }
 
-    document.addEventListener('DOMContentLoaded', function() {
-        const sliders = document.querySelectorAll('.slider');
-        sliders.forEach(slider => {
-            const images = slider.querySelectorAll('.slider-image');
-            let currentIndex = 0;
+        function closeNav() {
+            document.getElementById("sidenav").style.width = "0"; 
+        }
 
-            function showNextImage() {
-                images[currentIndex].style.opacity = 0;
-                currentIndex = (currentIndex + 1) % images.length;
-                images[currentIndex].style.opacity = 1;
-            }
-
-            setInterval(showNextImage, 3000);
-        });
-    });
+        AOS.init(); // Initialize animation library
 </script>
 </body>
 </html>
