@@ -29,6 +29,7 @@ include 'functies/functies.php';
         <p>Onze website wordt aangepast om u een betere ervaring te bieden. Bedankt voor uw geduld.</p>
         <p>Kom later nog eens terug!</p>
         <br><a href="login.php">Login hier in.</a>
+        <br><a href="index">Probeer opnieuw</a>
         <div class="loader"></div>
     </div>
 </body>

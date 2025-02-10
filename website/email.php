@@ -42,14 +42,14 @@ if (isset($_GET['afspraak_id'])){
 
         try {
             $mail->isSMTP();
-            $mail->Host = 'smtp.hostinger.com';  
+            $mail->Host = 'smtp.gmail.com';  
             $mail->SMTPAuth = true;
-            $mail->Username = 'info@needforcardetailing.be';  
-            $mail->Password = 'w365_LL1571';
+            $mail->Username = 'needforcardetailing@gmail.com';  
+            $mail->Password = 'oegtlrwnramtwhzt';
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port = 587;  
 
-            $mail->setFrom('info@needforcardetailing.be', 'NFCD');  
+            $mail->setFrom('needforcardetailing@gmail.com', 'NFCD');  
             $mail->addAddress($email);
             $mail->isHTML(true);
             $mail->Subject = 'Bevestiging van uw afspraak';

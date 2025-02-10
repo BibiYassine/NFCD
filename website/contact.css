@@ -144,8 +144,6 @@ footer p { font-size:13px; color:#CCC; padding-bottom:0px; margin-bottom:8px;}
 }
 
 .map-container {
-    width: 100%;
-    max-width: 600px;
     margin: 20px 0;
     border: 2px solid #ccc;
     border-radius: 8px;
@@ -185,6 +183,14 @@ footer p { font-size:13px; color:#CCC; padding-bottom:0px; margin-bottom:8px;}
 
 /* Responsive styling */
 @media (max-width: 768px) {
+    .map-container {
+        width: 400px;
+   
+        margin: 20px 0;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden; /* Zorgt ervoor dat de hoeken afgerond blijven */
+    }
     .kaartje {
         display: flex;
         flex-direction: column;

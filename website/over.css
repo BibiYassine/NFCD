@@ -96,10 +96,21 @@ img {
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
 /* Tekstinhoud */
 .text-content {
     max-width: 50%;
     color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .text-content h1 {

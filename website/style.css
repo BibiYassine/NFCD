@@ -24,7 +24,7 @@ h1, h2, h3, p {
     padding: 10px 20px;
     margin-top: 10px;
     margin-bottom: 5px;
-    background-color: var(--grey1); 
+    background-color: #263238;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -137,6 +137,44 @@ main {
     color: white;
 }
 
+/* review */
+/* Zorg dat de reviews naast elkaar staan */
+.reviews {
+    display: flex;
+    justify-content: center; /* Centraal uitlijnen */
+    gap: 20px; /* Ruimte tussen de reviews */
+    flex-wrap: wrap; /* Gaat naar de volgende rij bij weinig ruimte */
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    color: black;
+}
+
+/* Individuele review kaart */
+.review {
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Titel, sterren en tekst onder elkaar */
+    align-items: center;
+    padding: 30px;
+    background-color: #f9f9f9;
+    color: black;
+    border-radius: 10px; /* Afgeronde hoeken */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px; /* Beperkte breedte zodat ze mooi naast elkaar staan */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover effect */
+.review:hover {
+    transform: scale(1.1); /* Groter maken */
+    background-color: lightgray;
+    color: #FFF;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Grotere schaduw voor een pop-effect */
+}
+
+
+
+
 /* FAQ sectie */
 .faq {
     text-align: center;
@@ -224,10 +262,12 @@ video {
     width: 100%;
     height: auto;
     border-radius: 8px;
-    box-shadow:  2px 10px rgba(0, 0, 0, 0.1);
-    border: 5px solid black;
+    box-shadow:  2px 5px rgba(0, 0, 0, 0.1);
+    
     transition: box-shadow 0.3s ease, transform 0.3s ease; 
 }
+
+
 
 .service-item h3 {
     font-size: 1.5em;
@@ -273,8 +313,8 @@ video {
     width: 100%;
     height: auto;
     border-radius: 8px;
-    box-shadow:  2px 10px rgba(0, 0, 0, 0.1);
-    border: 5px solid black;
+    box-shadow:  2px 5px rgba(0, 0, 0, 0.1);
+
 }
 
 /* Footer */

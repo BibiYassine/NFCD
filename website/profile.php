@@ -47,6 +47,11 @@ $stmt->execute();
 $result = $stmt->get_result();
 $user = $result->fetch_assoc();
 
+for($row=0; $row < count($user); $row++){
+    echo "<tr>";
+    $_SESSION['klantnaam'] = $user['klantnaam'];
+}
+
 // Verwerk het formulier als het is ingediend
 if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Controleer of het formulier is ingediend
     if (isset($_POST['action']) && $_POST['action'] === 'update') { 
@@ -104,7 +109,7 @@ echo '<label for="postcode">Postcode:</label>';
 echo '<input type="text" id="postcode" name="postcode" value="' . htmlspecialchars($user['postcode']) . '" placeholder="Voer uw postcode in"><br>';
 
 echo '<label for="plaats">Plaats:</label>';
-echo '<input type="text" id="plaats" name="plaats" value="' . htmlspecialchars($user['plaats']) . '" placeholder="Voer uw plaats in" required><br>';
+echo '<input type="text" id="plaats" name="plaats" value="' . htmlspecialchars($user['plaats']) . '" placeholder="Voer uw plaats in"><br>';
 
 echo '<label for="telefoonnummer">Telefoonnummer:</label>';
 echo '<input type="text" id="telefoonnummer" name="telefoonnummer" value="' . htmlspecialchars($user['telefoonnummer']) . '" placeholder="Voer uw telefoonnummer in" required><br>';

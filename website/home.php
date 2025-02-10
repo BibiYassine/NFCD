@@ -39,11 +39,48 @@
             <p>NeedForCarDetailing, Het detail bedrijf dat uw wagen nodig heeft.</p>
             <a href="over.php" class="btn">Lees hier meer</a>
         </section>
-    
 
+            <?php
+      
+        $sql = "SELECT r.rating, r.text, k.klantnaam 
+                FROM reviews r
+                JOIN tblklant k ON r.klant_id = k.klant_id
+                ORDER BY RAND() LIMIT 4";
+        
+        $result = $mysqli->query($sql);
+        
+        // Controleer of er resultaten zijn
+        if ($result->num_rows > 0) {
+            echo '<section id="reviews" class="reviews">';
+         
+            while ($row = $result->fetch_assoc()) {
+                echo '<div class="review">';
+                // Toon de naam van de klant
+                echo '<h5>' . htmlspecialchars($row["klantnaam"]) . '</h5>';
+        
+                // Sterren weergeven
+                echo '<div class="stars">';
+                for ($i = 0; $i < $row["rating"]; $i++) {
+                    echo '⭐';
+                }
+                echo '</div>';
+                
+                // Reviewtekst weergeven
+                echo '<p>' . htmlspecialchars($row["text"]) . '</p>';
+                echo '</div>';
+            }
+        
+            echo '</section>';  
+        } else {
+            echo "<p>Geen reviews gevonden.</p>";
+        }
+        
+        // Sluit de databaseverbinding
+        $mysqli->close();
+        ?>
     <div>    
-        <section id="faq" class="faq" data-aos="fade-up">
-            <h2>Veel Gestelde Vragen (FAQ)</h2>
+        <section id="faq" class="faq">
+            <h2>Veel Gestelde Vragen (FAQ)</h2 data-aos="fade-up">
             <p>Dit zijn de meest gestelde vragen die wij krijgen als detailing bedrijf.</p>
             <div class="faq-container">
                 <div class="faq-item" data-aos="fade-up">
@@ -72,21 +109,25 @@
             <div class="services-container" data-aos="fade-up">
             <div class="service-item" data-aos="fade-up">
                     <img src="images/alcantara.png" alt="Alcantara Cleaning">
+                    <br>
                     <h3 data-aos="fade-up">Alcantara Cleaning</h3>
                     <p data-aos="fade-up">Specialistische reiniging voor Alcantara stoffen.</p>
                 </div>
                 <div class="service-item">
                 <img src="images/ext.png" alt="Dieptereiniging">
+                    <br>
                     <h3 data-aos="fade-up">Dieptereiniging</h3>
                     <p data-aos="fade-up">Een grondige reiniging van uw voertuig, van binnen en buiten.</p>
                 </div>
                 <div class="service-item" data-aos="fade-up">
                     <img src="images/refresh.png" alt="Leder Cleaning">
+                    <br>
                     <h3 data-aos="fade-up">Leder Cleaning</h3>
                     <p data-aos="fade-up">Professionele reiniging en onderhoud van lederen bekleding.</p>
                 </div>
                 <div class="service-item" data-aos="fade-up">
-                    <img src="images/aklasse.png" alt="Interieur Reiniging">
+                    <img src="images/matten.jpg" alt="Interieur Reiniging">
+                    <br>
                     <h3 data-aos="fade-up">Interieur Reiniging</h3>
                     <p data-aos="fade-up" >Grondige reiniging van het interieur van uw auto.</p>
                 </div>
@@ -99,14 +140,17 @@
             <div class="car-types-container">
                 <div class="car-type-item" data-aos="fade-up">
                     <img src="images/190Dbuiten.png" alt="Oldtimer">
+                    <br>
                     <h3 data-aos="fade-up">Oldtimers</h3>
                 </div>
                 <div class="car-type-item" data-aos="fade-up">
                     <img src="images/c220.png" alt="Normale Auto">
+                    <br>
                     <h3 data-aos="fade-up">Normale Auto's/SUV</h3>
                 </div>
                 <div class="car-type-item" data-aos="fade-up">
                     <img src="images/jaguar.png" alt="Supercar">
+                    <br>
                     <h3 data-aos="fade-up">Luxere Auto's</h3>
                 </div>
                
@@ -114,51 +158,9 @@
         </section>
         
 
-        <footer class="footer">
-<div class="container bottom_border">
-<div class="row">
-<div class=" col-sm-4 col-md col-sm-4  col-12 col">
-<h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
-<!--headin5_amrc-->
-<p class="mb10">NFCD, het bedrijf dat uw wagen nodig heeft om er zo nieuw mogelijk uit te zien. Wij behandelen met alle plezier auto's die gedeepcleaned moeten worden, auto's die er terug showroom ready moeten uitzien. Dus aarzel niet om een afspraak te boeken.</p>
-<br>
-
-<p><a href="https://www.google.be/maps/place/Mechelsesteenweg,+2860+Sint-Katelijne-Waver/@51.0523262,4.5174803,17z/data=!3m1!4b1!4m6!3m5!1s0x47c3e4f4b7a5b4fb:0x3ad639d2357511a9!8m2!3d51.0523262!4d4.5200552!16s%2Fg%2F1tdr2grh?hl=nl&entry=ttu&g_ep=EgoyMDI0MTExMS4wIKXMDSoASAFQAw%3D%3D"><i class="fa fa-location-arrow"></i> Mechelsesteenweg 2860 Sint-Katelijne-Waver </p></a>
-<p><i class="fa fa-phone"></i>  +32 499 91 21 81 </p>
-<p><i class="fa fa fa-envelope"></i> needforcardetailing@gmail.com </p>
-
-
-</div>
-
-<div class=" col-sm-4 col-md  col-6 col">
-<h5 class="headin5_amrc col_white_amrc pt2">Veel bezocht</h5>
-<!--headin5_amrc-->
-<ul class="footer_ul_amrc">
-<li><a href="services">Onze Pakketen</a></li>
-<li><a href="home#services">Wat bieden we aan?</a></li>
-<li><a href="contact#gemeentes">Welke steden?</a></li>
-<li><a href="home#faq">Faq</a></li>
-</ul>
-<!--footer_ul_amrc ends here-->
-</div>
-
-<div class="container">
-<ul class="foote_bottom_ul_amrc">
-<li><a href="home">Home</a></li>
-<li><a href="services">Services</a></li>
-<li><a href="contact">Contact</a></li>
-<li><a href="register">Register</a></li>
-</ul>
-<!--foote_bottom_ul_amrc ends here-->
-<p class="text-center">Copyright @2024 | Designed With by NeedForCarDetailing</p>
-<ul class="social_footer_ul">
-
-<li><a href="https://www.instagram.com/needforcardetailing/"><i class="fab fa-instagram"></i></a></li>
-</ul>
-<!--social_footer_ul ends here-->
-</div>
-
-</footer>
+        <?php
+    include 'functies/footer.php';
+?>
 
     </main>
     <script src="libraries/aos.js"></script>

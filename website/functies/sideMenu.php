@@ -4,6 +4,7 @@ echo '<div class="sidenav" id="sidenav">
         <a href="index">Home</a>
         <a href="over">Over Ons</a>
         <a href="services">Services</a>
+        <a href="review">Plaats een Review</a>
         <a href="contact">Contact</a>';
         if($_SESSION['email']=="gast"){
             echo '<a href="login">Login</a>';

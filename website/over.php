@@ -24,6 +24,10 @@
     include 'functies/sideMenu.php';
     include 'functies/functies.php';
     onderhoudsModus();
+    $query = "UPDATE page_viewcount SET viewcount_about = viewcount_about + 1 WHERE id = 1";
+    $mysqli->query($query);
+
+    $mysqli->close();
 ?>
 <main>
     <section class="about-section">
@@ -33,62 +37,27 @@
                     <img src="images/logo.png" alt="NFCD Detail Service Front" class="about-image front-image">
                     <img src="images/achterkant.png" alt="NFCD Detail Service Back" class="about-image back-image">
                 </div>
-              
+           
             </div>
+            <br>
             <div class="text-content" data-aos="fade-up">
-                <h1>NFCD?</h1>
+                <div class="inleiding">
+                <h1>Waarom NFCD?</h1>
                 <p data-aos="fade-up">
                     Bij NFCD streven we naar de hoogste kwaliteit in dieptereiniging en detailing van uw voertuig. Onze detailers gebruiken geavanceerde technieken en hoogwaardige producten om elk detail grondig te reinigen en uw auto in topconditie te houden. Ons doel is om de perfecte afwerking te leveren, waarbij we elk voertuig met zorg en aandacht behandelen, zodat u de kunst van dieptereiniging en detailing kunt ervaren zoals nooit tevoren.
                 </p>
             </div>
+            <br>
+            <div class="inleiding" data aos="fade-up">
+            <h1>Wat maakt ons anders</h1>
+            <p data aos="fade-up">Bij elke reinigingsbeurt streven wij ernaar om onze klanten de hoogste tevredenheid te bieden. We bestrijden grondig bacteriën bij elk pakket en maken gebruik van een stoomreiniger om deze effectief te verwijderen, zelfs bij de laagste reinigingsopties. Twijfelt u over welk pakket het beste voor uw voertuig is? Geen zorgen! Ons team staat klaar om samen met u te bepalen wat uw wagen nodig heeft. Wij nemen altijd de tijd om elk detail zorgvuldig te reinigen en zijn volledig transparant: mocht er iets zijn dat we niet kunnen verwijderen, dan informeren wij u daar eerlijk over.</p>
+            </div>
         </div>
     </section>
     </main>
-
-    <footer class="footer">
-<div class="container bottom_border">
-<div class="row">
-<div class=" col-sm-4 col-md col-sm-4  col-12 col">
-<h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
-<!--headin5_amrc-->
-<p class="mb10">NFCD, het bedrijf dat uw wagen nodig heeft om er zo nieuw mogelijk uit te zien. Wij behandelen met alle plezier auto's die gedeepcleaned moeten worden, auto's die er terug showroom ready moeten uitzien. Dus aarzel niet om een afspraak te boeken.</p>
-<br>
-
-<p><a href="https://www.google.be/maps/place/Mechelsesteenweg,+2860+Sint-Katelijne-Waver/@51.0523262,4.5174803,17z/data=!3m1!4b1!4m6!3m5!1s0x47c3e4f4b7a5b4fb:0x3ad639d2357511a9!8m2!3d51.0523262!4d4.5200552!16s%2Fg%2F1tdr2grh?hl=nl&entry=ttu&g_ep=EgoyMDI0MTExMS4wIKXMDSoASAFQAw%3D%3D"><i class="fa fa-location-arrow"></i> Mechelsesteenweg 2860 Sint-Katelijne-Waver </p></a>
-<p><i class="fa fa-phone"></i>  +32 499 91 21 81 </p>
-<p><i class="fa fa fa-envelope"></i> needforcardetailing@gmail.com </p>
-
-
-</div>
-
-<div class=" col-sm-4 col-md  col-6 col">
-<h5 class="headin5_amrc col_white_amrc pt2">Veel bezocht</h5>
-<!--headin5_amrc-->
-<ul class="footer_ul_amrc">
-<li><a href="services">Onze Pakketen</a></li>
-<li><a href="home#services">Wat bieden we aan?</a></li>
-<li><a href="contact#gemeentes">Welke steden?</a></li>
-<li><a href="home#faq">Faq</a></li>
-</ul>
-<!--footer_ul_amrc ends here-->
-</div>
-
-<div class="container">
-<ul class="foote_bottom_ul_amrc">
-<li><a href="home">Home</a></li>
-<li><a href="services">Services</a></li>
-<li><a href="contact">Contact</a></li>
-<li><a href="register">Register</a></li>
-</ul>
-<!--foote_bottom_ul_amrc ends here-->
-<p class="text-center">Copyright @2024 | Designed With by NeedForCarDetailing</p>
-<ul class="social_footer_ul">
-<li><a href="https://www.instagram.com/needforcardetailing/"><i class="fab fa-instagram"></i></a></li>
-</ul>
-<!--social_footer_ul ends here-->
-</div>
-
-</footer>
+    <?php
+        include 'functies/footer.php';
+    ?>
 
     
 
