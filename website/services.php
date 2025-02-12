@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services-NFCD</title>
     <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="css/services.css">
     <link rel="stylesheet" href="libraries/aos.css">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
