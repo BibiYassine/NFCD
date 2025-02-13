@@ -23,7 +23,7 @@
     include 'functies/sideMenu.php';
     include 'functies/functies.php';
     onderhoudsModus();
-    controleerAdmin($mysqli);
+    // controleerAdmin($mysqli);
     $query = "UPDATE page_viewcount SET viewcount_about = viewcount_about + 1 WHERE id = 1";
     $mysqli->query($query);
     $mysqli->close();
@@ -48,7 +48,7 @@
 
             <!-- Tweede tekstblok met video -->
             <div class="inleiding">
-                <div class="text">
+                <div class="text" id="video">
                     <h1>Wat maakt ons anders?</h1>
                     <p>
                         We bestrijden grondig bacteriën bij elk pakket en maken gebruik van een stoomreiniger om deze effectief te verwijderen.

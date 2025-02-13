@@ -7,7 +7,7 @@
     include 'functies/sideMenu.php';
     include 'functies/functies.php';
     onderhoudsModus();
-    controleerAdmin($mysqli);
+    // controleerAdmin($mysqli);
 ?>
 <!DOCTYPE html>
 <html lang="en">

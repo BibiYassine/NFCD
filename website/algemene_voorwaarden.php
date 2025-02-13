@@ -1,5 +1,5 @@
 <?php
-   controleerAdmin($mysqli);
+//    controleerAdmin($mysqli);
 ?>
 <!DOCTYPE html>
 <html lang="nl">

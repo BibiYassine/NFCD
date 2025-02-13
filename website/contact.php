@@ -29,7 +29,7 @@
     include 'functies/sideMenu.php';
     include 'functies/functies.php';
     onderhoudsModus();
-    controleerAdmin($mysqli);
+    // controleerAdmin($mysqli);
     ?>
 
     <main>
@@ -39,7 +39,7 @@
                 
             </div>
 
-            <div class="map-container" data-aos="fade-up">
+            <!-- <div class="map-container" data-aos="fade-up">
                
                 <iframe data-aos="fade-up"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2528.094883573593!2d4.508598215720678!3d51.08345717956607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3a9b947bfeb15%3A0x1549a16980ed2b12!2sMechelsesteenweg%2C%20Sint-Katelijne-Waver!5e0!3m2!1snl!2sbe!4v1697891829735!5m2!1snl!2sbe"
@@ -50,7 +50,8 @@
                 loading="lazy">
             </iframe>
             
-            </div>
+            </div> -->
+            <br>
             <div class= "kaartje">
             <img src="images/voorkant2.png" alt="contact" class="contact-img" data-aos="fade-up">
             <br>

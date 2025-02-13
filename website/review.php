@@ -40,7 +40,7 @@
     }
 </style>
 <?php
-controleerAdmin($mysqli);
+// controleerAdmin($mysqli);
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 

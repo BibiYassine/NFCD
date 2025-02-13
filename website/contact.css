@@ -96,8 +96,8 @@ main {
 /* Responsive styling */
 @media (max-width: 768px) {
     .map-container {
-        width: 400px;
-   
+        width: 100%;
+        max-width: 1500px;
         margin: 20px 0;
         border: 2px solid #ccc;
         border-radius: 8px;

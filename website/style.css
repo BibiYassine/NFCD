@@ -349,6 +349,8 @@ video {
         width: 100%;
     }
 
+
+
     .faq-container,
     .services-container,
     .car-types-container {
@@ -369,5 +371,20 @@ video {
         justify-content: center;
         align-items: center;
         margin: 10px auto;
+    }
+}
+@media (max-width: 768px) {
+    .review {
+        width: 100%; /* Full width on smaller screens */
+        max-width: 300px; /* Max width to prevent it from stretching too far */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .review {
+        width: 100%;
+        max-width: 280px; /* Slightly smaller max width for very small screens */
+        padding: 15px; /* Adjust padding further */
     }
 }

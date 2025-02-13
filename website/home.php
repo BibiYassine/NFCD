@@ -31,7 +31,7 @@
             include 'functies/sideMenu.php';
             include 'functies/functies.php';
             onderhoudsModus();
-            controleerAdmin($mysqli);
+            // controleerAdmin($mysqli);
       ?>
 
 <span class="menu-toggle" onclick="openNav()">&#9776;</span>

@@ -1,0 +1,55 @@
+
+/* Sidenav (zijmenu) */
+.sidenav {
+    height: 100%;
+    width: 0; /* Start breedte op 0 zodat het niet zichtbaar is */
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    background-color: #263238;
+    overflow-x: hidden;
+    transition: 0.5s; /* Zorgt voor een soepele overgang */
+    padding-top: 60px;
+   
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.3em;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: darkgrey;
+    text-decoration: none;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 2em;
+}
+
+/* Hamburger menu */
+.menu-toggle {
+    margin-left: 15px;
+    font-size: 45px;
+    cursor: pointer;
+    position: fixed; /* Change to fixed position */
+    top: 10px;
+    left: 15px;
+    color: white;
+    z-index: 1000; /* Ensure it is above other elements */
+    background-color: #263238;
+    border-radius: 50px; /* Make the background a circle */
+    width: 60px;
+    height: 60px; /* Ensure width and height are equal */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -13,7 +13,7 @@ echo '<footer>
       <ul>
         <a href="services">Onze Pakketten</a><br>
         <a href="contact#contact-form">Vragen?</a><br>
-        <a href="contact#gemeentes">Welke steden?</a><br>
+        <a href="over#video">Wat maakt ons anders?</a><br>
         <a href="home#faq">FAQ</a>
       </ul>
     </div>

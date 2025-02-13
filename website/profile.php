@@ -26,7 +26,7 @@ include 'functies/sideMenu.php';
 include 'functies/functies.php';
 
 onderhoudsModus();
-controleerAdmin($mysqli);
+// controleerAdmin($mysqli);
 
 // Controleer of de gebruiker is ingelogd
 if (!isset($_SESSION['email'])) {
