@@ -1,5 +1,5 @@
 <?php
-    // Include header or any necessary PHP code here if needed
+   controleerAdmin($mysqli);
 ?>
 <!DOCTYPE html>
 <html lang="nl">

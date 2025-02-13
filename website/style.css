@@ -1,0 +1,373 @@
+/* Basisinstellingen voor html en body */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Dit zorgt ervoor dat de body altijd minimaal de hoogte van de viewport heeft */
+    font-family: Arial, sans-serif;
+}
+
+:root{
+    --grey1 : black;
+}
+
+
+
+h1, h2, h3, p {
+    color: var(--grey1);
+}
+
+.book-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #263238;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 8px 12px rgba(31, 31, 31, 0.2);
+}
+
+.book-button:hover {
+    background-color: darkgrey;
+    text-decoration: none;
+    color: #455a64;
+    box-shadow: 0 12px 16px rgba(31, 31, 31, 0.2);
+    transform: scale(1.1);
+ 
+}
+
+
+
+main {
+    background-image: url(images/Video1-ezgif.gif); 
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
+    flex: 1; 
+    height: 100%;
+}
+
+/* Hero sectie */
+.hero {
+
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+    color: white;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin: 15px 0;
+    color: white;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #263238;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 8px 12px rgba(31, 31, 31, 0.2);
+}
+
+.btn:hover {
+    background-color: darkgrey;
+    text-decoration: none;
+    color: #455a64;
+    box-shadow: 0 12px 16px rgba(31, 31, 31, 0.2);
+    transform: scale(1.1);
+}
+
+/* review */
+/* Zorg dat de reviews naast elkaar staan */
+.reviews {
+    display: flex;
+    justify-content: center; /* Centraal uitlijnen */
+    gap: 20px; /* Ruimte tussen de reviews */
+    flex-wrap: wrap; /* Gaat naar de volgende rij bij weinig ruimte */
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    color: black;
+}
+
+/* Individuele review kaart */
+.review {
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Titel, sterren en tekst onder elkaar */
+    align-items: center;
+    padding: 30px;
+    background-color: #f9f9f9;
+    color: black;
+    border-radius: 10px; /* Afgeronde hoeken */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px; /* Beperkte breedte zodat ze mooi naast elkaar staan */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover effect */
+.review:hover {
+    transform: scale(1.1); /* Groter maken */
+    background-color: lightgray;
+    color: #FFF;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Grotere schaduw voor een pop-effect */
+}
+
+
+
+
+/* FAQ sectie */
+.faq {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+    color: black;
+}
+
+.faq h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.faq p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.faq-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.faq-item {
+    width: calc(33.33% - 40px); /* 3 kolommen met ruimte voor margin */
+    text-align: center;
+    margin: 20px;
+}
+
+.faq-item img {
+    width: 80px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 1em;
+    color: #333;
+}
+
+/* Services sectie */
+.services {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+video {
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    transition: box-shadow 0.3s ease, transform 0.3s ease;  
+}
+
+.services h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.services p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.service-item {
+    width: calc(22% - 40px); /* 4 kolommen met ruimte voor margin */
+    text-align: center;
+    margin: 20px;
+}
+
+.service-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; 
+}
+.service-item img:hover {
+    box-shadow: 0 12px 16px rgba(31, 31, 31, 0.2); 
+    transform: scale(1.1); 
+}
+
+
+
+.service-item h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.service-item p {
+    font-size: 1em;
+    color: #333;
+}
+
+/* Car Types sectie */
+.car-types {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #eaeaea;
+}
+
+.car-types h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.car-types p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.car-types-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.car-type-item {
+    width: calc(22% - 40px); /* 4 kolommen met ruimte voor margin */
+    text-align: center;
+    margin: 20px;
+}
+
+.car-type-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.car-type-item img:hover {
+    box-shadow: 0 12px 16px rgba(31, 31, 31, 0.2);
+    transform: scale(1.1);
+}
+
+
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    main {
+        background-image: url(images/Video1-ezgif.gif);
+        background-repeat: no-repeat;   
+    }
+
+    .btn:hover {
+        background-color: grey;
+        color: white;
+    }
+
+    .hero h1 {
+        font-size: 3em;
+        margin: 0;
+        color: white;
+    }
+    
+    .hero p {
+        font-size: 1.2em;
+        margin: 15px 0;
+        color: white;
+    }
+    
+    .btn {
+        text-decoration: none;
+        background-color: transparent;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: 15px;
+        font-size: 45px;
+        cursor: pointer;
+        position: fixed; /* Change to fixed position */
+        top: 10px;
+        left: 15px;
+        color: white;
+        z-index: 1000; /* Ensure it is above other elements */
+        background-color: #263238;
+        border-radius: 50px; /* Make the background a circle */
+        width: 60px;
+        height: 60px; /* Ensure width and height are equal */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h1 {
+        display: flex;
+        justify-content: center;
+    }
+
+    h2 {
+        position: relative;
+        top: 10px;
+        margin: 0;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .faq-container,
+    .services-container,
+    .car-types-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .faq-item,
+    .service-item,
+    .car-type-item {
+        width: 90%; /* Maak de breedte voor kleine schermen groter */
+        margin: 10px 0; /* Verklein de marges */
+    }
+
+    .insta {
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px auto;
+    }
+}

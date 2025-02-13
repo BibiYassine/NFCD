@@ -11,7 +11,7 @@ include 'functies/functies.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Onderhoudspagina</title>
-    <link rel="stylesheet" href="css/onderhoud.css">
+    <link rel="stylesheet" href="onderhoud.css">
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>

@@ -40,7 +40,7 @@ controleerAdmin($mysqli);
     </script>
 
     <!-- CSS Files -->
-     <link rel="stylesheet" href="css/review.css">
+     <link rel="stylesheet" href="review.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/plugins.min.css" />
     <link rel="stylesheet" href="assets/css/kaiadmin.min.css" />

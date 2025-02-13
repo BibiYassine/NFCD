@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NFCD</title>
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="scroll.css">
+    <link rel="stylesheet" href="sidenav.css">
     <link rel="stylesheet" href="libraries/aos.css">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -28,6 +31,7 @@
             include 'functies/sideMenu.php';
             include 'functies/functies.php';
             onderhoudsModus();
+            controleerAdmin($mysqli);
       ?>
 
 <span class="menu-toggle" onclick="openNav()">&#9776;</span>
@@ -41,7 +45,7 @@
         </section>
 
             <?php
-      
+        
         $sql = "SELECT r.rating, r.text, k.klantnaam 
                 FROM reviews r
                 JOIN tblklant k ON r.klant_id = k.klant_id
@@ -52,7 +56,7 @@
         // Controleer of er resultaten zijn
         if ($result->num_rows > 0) {
             echo '<section id="reviews" class="reviews">';
-         
+
             while ($row = $result->fetch_assoc()) {
                 echo '<div class="review">';
                 // Toon de naam van de klant
@@ -69,8 +73,9 @@
                 echo '<p>' . htmlspecialchars($row["text"]) . '</p>';
                 echo '</div>';
             }
-        
-            echo '</section>';  
+           
+            echo '</section>';
+            
         } else {
             echo "<p>Geen reviews gevonden.</p>";
         }
@@ -110,24 +115,32 @@
             <div class="service-item" data-aos="fade-up">
                     <img src="images/alcantara.png" alt="Alcantara Cleaning">
                     <br>
+                    <br>
+                    <hr>
                     <h3 data-aos="fade-up">Alcantara Cleaning</h3>
                     <p data-aos="fade-up">Specialistische reiniging voor Alcantara stoffen.</p>
                 </div>
                 <div class="service-item">
                 <img src="images/ext.png" alt="Dieptereiniging">
                     <br>
+                    <br>
+                    <hr>
                     <h3 data-aos="fade-up">Dieptereiniging</h3>
                     <p data-aos="fade-up">Een grondige reiniging van uw voertuig, van binnen en buiten.</p>
                 </div>
                 <div class="service-item" data-aos="fade-up">
                     <img src="images/refresh.png" alt="Leder Cleaning">
                     <br>
+                    <br>
+                    <hr>
                     <h3 data-aos="fade-up">Leder Cleaning</h3>
                     <p data-aos="fade-up">Professionele reiniging en onderhoud van lederen bekleding.</p>
                 </div>
                 <div class="service-item" data-aos="fade-up">
                     <img src="images/matten.jpg" alt="Interieur Reiniging">
                     <br>
+                    <br>
+                    <hr>
                     <h3 data-aos="fade-up">Interieur Reiniging</h3>
                     <p data-aos="fade-up" >Grondige reiniging van het interieur van uw auto.</p>
                 </div>
@@ -141,16 +154,25 @@
                 <div class="car-type-item" data-aos="fade-up">
                     <img src="images/190Dbuiten.png" alt="Oldtimer">
                     <br>
+                    <br>
+                    <br>
+                    <hr>
                     <h3 data-aos="fade-up">Oldtimers</h3>
                 </div>
                 <div class="car-type-item" data-aos="fade-up">
                     <img src="images/c220.png" alt="Normale Auto">
                     <br>
+                    <br>
+                    <br>
+                    <hr>
                     <h3 data-aos="fade-up">Normale Auto's/SUV</h3>
                 </div>
                 <div class="car-type-item" data-aos="fade-up">
                     <img src="images/jaguar.png" alt="Supercar">
                     <br>
+                    <br>
+                    <br>
+                    <hr>
                     <h3 data-aos="fade-up">Luxere Auto's</h3>
                 </div>
                

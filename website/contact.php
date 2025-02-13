@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact-NFCD</title>
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="scroll.css">
+    <link rel="stylesheet" href="sidenav.css">
     <link rel="stylesheet" href="libraries/aos.css">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -26,6 +29,7 @@
     include 'functies/sideMenu.php';
     include 'functies/functies.php';
     onderhoudsModus();
+    controleerAdmin($mysqli);
     ?>
 
     <main>

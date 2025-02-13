@@ -7,6 +7,7 @@
     include 'functies/sideMenu.php';
     include 'functies/functies.php';
     onderhoudsModus();
+    controleerAdmin($mysqli);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +16,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services-NFCD</title>
     <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="scroll.css">
+    <link rel="stylesheet" href="sidenav.css">
     <link rel="stylesheet" href="libraries/aos.css">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -30,66 +34,90 @@
 </head>
 <body>
 <main>
-    <section class="services-section" >
-        <h2 data-aos="fade-up">Onze Pakketten</h2>
+    <section class="services-section">
+    <h2 data-aos="fade-up">Onze Pakketten</h2>
 
-        <!-- classic -->
-        <div class="services-container" data-aos="fade-up">
-            <div class="service-item" data-aos="fade-up">
-                <div class="slider">
-                    <img src="images/classicskoda.png" alt="Classic Pakket 2" class="slider-image" data aos="fade-up">
-                </div>
-                <br>
-                <div class="slider">
-                <img src="images/after1.png" alt="Classic Pakket 1" class="slider-image" data aos="fade-up">
-
-                </div>
-         
-                <h3 id="classic" data aos="fade-up">Classic - €30</h3>
-               
-               
-            </div>
-<!-- Refresh -->
-
-            <div class="service-item" data-aos="fade-up">
-                <div class="slider">
-                    
-                    <img src="images/polo1.png" alt="Refresh Pakket 2" class="slider-image" data aos="fade-up">
-                </div>
-                <br>
-                <div class="slider">
-                <img src="images/polo.png" alt="Refresh Pakket 1" class="slider-image" data aos="fade-up">
-                </div>
-                <h3 data-aos="fade-up">Refresh - €85</h3>
-                
-            </div>
-
-
-<!-- Diamond -->
-
-            <div class="service-item" data-aos="fade-up">
-                <div class="slider">
-                  
-                    <img src="images/ext.png" alt="Diamond Pakket 2" class="slider-image" data aos="fade-up">
-                </div>
-                <br>
-                <div class="slider">
-                <img src="images/refresh.png" alt="Diamond Pakket 1" class="slider-image" data aos="fade-up">
-                </div>
-                <h3 data-aos="fade-up">Diamond - €130</h3>
-            </div>
+    <!-- Classic Pakket -->
+    <div class="pakket-container" data-aos="fade-up">
+        <div class="pakket-info">
+            <h3  data-aos="fade-up">Classic - €30</h3>
+            <hr>
+            <p  data-aos="fade-up">Een basisreiniging voor zowel interieur als exterieur. Ideaal voor regelmatig onderhoud.<br>In dit pakket wordt uw auto volledig afgestoft. De vloeren, matten en zetels worden gestofzuigd en we reinigen uw deurpanelen en stuur ook, dit aan de hand van een stoomreiniger.</p>
+       
             <br>
+            <hr>
+            <a href="contact#cont-form" class="book-button" data aos="fade-up">Afspraak maken</a>
         </div>
-        <br>
-        <div class="prijzen" data aos="fade-up">
-        <h2>Hieronder vindt u een overzicht van onze diensten:</h2 data aos="fade-up">
-        <br>
-        <img src="images/prijzen.png" alt="contact" class="contact-img" data-aos="fade-up">
+        <div class="pakket-media">
+            <img src="images/classicskoda.png" alt="Classic Pakket" onclick="openLightbox('classic')"  data-aos="fade-up">
+            
         </div>
-    </section>
+    </div>
+
+    <!-- Refresh Pakket -->
+    <div class="pakket-container" data-aos="fade-up">
+        <div class="pakket-info">
+            <h3  data-aos="fade-up">Refresh - €85</h3>
+            <hr>
+            <p  data-aos="fade-up">Een grondige reiniging van het interieur.<br>In dit pakket dieptereinigen we uw stoelen, matten en als het nodig is uw vloer. We desinfecteren ook het gehele interieur met een stoomreiniger. We zijn ook in staat om alcantara stoelen en lederen stoelen te reinigen, we kunnen ook lederen stoelen verzorgen, en een beschermlaagje op brengen tegen vuil, verkleuring en scheuren. Uw deurpanelen, dashboard en stuurtje worden ook gereinigd.</p>
+            <br>
+            <hr>
+            <a href="contact#cont-form" class="book-button" data aos="fade-up">Afspraak maken</a>
+        </div>
+        <div class="pakket-media">
+            <video controls src="images/stuur.mp4" autoplay muted loop type="video/mp4" onclick="openLightbox('refresh')"  data-aos="fade-up">
+                Je browser ondersteunt geen video.
+            </video>
+         
+        </div>
+    </div>
+
+    <!-- Diamond Pakket -->
+    <div class="pakket-container" data-aos="fade-up">
+        <div class="pakket-info"  data-aos="fade-up">
+            <h3 data-aos="fade-up">Diamond - €130</h3>
+            <hr>
+            <p  data-aos="fade-up">Onze meest uitgebreide detailing-pakket waarbij wij het gehele interieru en exterieur reinigen.<br>In dit pakket dieptereinigen we uw stoelen, matten en als het nodig is uw vloer. We desinfecteren ook het gehele interieur met een stoomreiniger. We zijn ook in staat om alcantara stoelen en lederen stoelen te reinigen, we kunnen ook lederen stoelen verzorgen en een beschermlaagje op brengen tegen vuil, verkleuring en scheuren. Uw deurpanelen, dashboard en stuurtje worden ook gereinigd.<br>We reinigen ook het exterieur. In tegenstelling tot ons Classic pakket behandelen we alles van het exterieur zoals velgen, motorkap, etc. </p>
+            <br>
+            <hr>
+            <a href="contact#cont-form" class="book-button" data aos="fade-up">Afspraak maken</a> 
+        </div>
+        <div class="pakket-media">
+            <video controls src="images/deep.mp4" autoplay muted loop type="video/mp4" onclick="openLightbox('diamond')"  data-aos="fade-up">
+                Je browser ondersteunt geen video.
+            </video>
+         
+        </div>
+    </div>
+
+    <div class="pakket-container" data-aos="fade-up">
+        <div class="pakket-info"  data-aos="fade-up">
+            <h3 data-aos="fade-up">Extras</h3>
+            <hr>
+            <p  data-aos="fade-up">Motor ruimte reinigen: + €20<br>Afstanden > 25km: + €15<br></p>
+            <hr>
+            <h4>Duur van services: </h4>
+       
+            <p>Classic: +- 30 minuten<br>Refresh: +- 3 werkuren <br>Diamond: +- 6 werkuren</p> 
+        
+        </div>
+        <div class="pakket-media">
+            <img src="images/motorkap1.png" alt="Classic Pakket" onclick="openLightbox('extra')"  data-aos="fade-up">
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+    <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+    <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+    <span class="next" onclick="changeImage(1)">&#10095;</span>
+    <div class="lightbox-content">
+        <img id="lightbox-img" src="">
+    </div>
+</div>
 
 
-<center><a href="contact#cont-form" class="book-button" data aos="fade-up">Boek hier je afspraak.</a></center>
 
 
 <?php

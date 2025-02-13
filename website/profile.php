@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/profile.css">
-    <link rel="stylesheet" href="css/form.css">
-    
+  
     <title>Profile-NFCD</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="scroll.css">
+    <link rel="stylesheet" href="sidenav.css"> 
     <link rel="shortcut icon" href="images/prof.png" type="image/x-icon">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -25,6 +26,7 @@ include 'functies/sideMenu.php';
 include 'functies/functies.php';
 
 onderhoudsModus();
+controleerAdmin($mysqli);
 
 // Controleer of de gebruiker is ingelogd
 if (!isset($_SESSION['email'])) {
@@ -37,8 +39,7 @@ if (!isset($_SESSION['updated'])) {
     $_SESSION['updated'] = false;
 }
 
-// Welkomstbericht
-echo "<h4>Mijn Gegevens</h4>";
+
 
 // Haal de gegevens van de ingelogde gebruiker op
 $stmt = $mysqli->prepare("SELECT * FROM tblklant WHERE email = ?");

@@ -1,0 +1,83 @@
+/* Algemene opmaak */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* Hero sectie */
+.about-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Inhoud (tekst en afbeelding/video naast elkaar) */
+.inleiding {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+/* Tekststijl */
+.text {
+    width: 50%;
+}
+
+.text h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: rgb(27, 27, 27);
+}
+
+/* Afbeeldingen naast de tekst */
+.inleiding img {
+    width: 45%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Video stijl */
+.inleiding video {
+    width: 60%;
+    max-height: 700px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsieve aanpassingen */
+@media (max-width: 768px) {
+    .inleiding {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    .inleiding img, .inleiding video {
+        width: 100%;
+    }
+}
